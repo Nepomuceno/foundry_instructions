@@ -3,7 +3,7 @@ layout: doc
 title: GitHub Copilot Integration
 eyebrow: 06 — GitHub Copilot
 permalink: /copilot/
-description: Wire the AI Gateway into GitHub Copilot Chat as a BYOK provider — works in VS Code, Visual Studio, and JetBrains.
+description: Wire the AI Gateway into the GitHub Copilot CLI (first-class env-var support) and, where possible, into Copilot Chat in VS Code.
 ---
 
 {% capture _src %}{% include_relative GITHUB_COPILOT_INTEGRATION.md %}{% endcapture %}
