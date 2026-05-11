@@ -19,23 +19,50 @@ This takes about 2 minutes if your config file already exists. About 3 minutes i
 
 ## Step 0: Install OpenCode
 
-If you don't have it yet, pick one (full list at <https://opencode.ai/docs/install>):
+If you don't have it yet, pick the row that matches your OS (full list at <https://opencode.ai/docs/install>):
+
+### macOS / Linux
 
 ```bash
-# macOS / Linux — recommended installer
+# Recommended installer
 curl -fsSL https://opencode.ai/install | bash
 
-# Homebrew
+# Homebrew (macOS / Linuxbrew)
 brew install sst/tap/opencode
 
-# npm (global)
+# npm (cross-platform, requires Node 18+)
 npm install -g opencode-ai
+```
 
-# Windows (PowerShell)
+### Windows
+
+You have three good options. Pick **one**.
+
+```powershell
+# 1. PowerShell installer (run in a normal PowerShell, not "as Admin")
 irm https://opencode.ai/install.ps1 | iex
 ```
 
-Verify:
+```powershell
+# 2. Scoop (https://scoop.sh)
+scoop bucket add extras
+scoop install opencode
+```
+
+```powershell
+# 3. npm (works inside PowerShell, cmd, or Git Bash)
+npm install -g opencode-ai
+```
+
+**Windows-specific notes:**
+
+- Run PowerShell as your **regular user**, not Administrator. The installer writes to `%LOCALAPPDATA%`.
+- If `irm | iex` is blocked by execution policy, run this once in the same PowerShell session: `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass`.
+- After install, **close and reopen** your terminal so the new PATH entry is picked up. If `opencode` still isn't found, add the install dir (printed by the installer, typically `%LOCALAPPDATA%\Programs\opencode`) to your user PATH via `System Properties → Environment Variables`.
+- **WSL counts as Linux**, not Windows. Use the macOS/Linux installer inside your WSL distro.
+- The TUI works in **Windows Terminal**, **PowerShell 7**, **VS Code's integrated terminal**, and **Git Bash**. The legacy `cmd.exe` console works but renders worse — use Windows Terminal if you can.
+
+### Verify (all platforms)
 
 ```bash
 opencode --version
@@ -63,6 +90,8 @@ All of them through one provider entry, one base URL, one key.
 
 ## Step 1: Save the Key
 
+### macOS / Linux
+
 ```bash
 # Just for this terminal session
 export AI_GATEWAY_API_KEY="<your-api-key>"
@@ -72,15 +101,53 @@ echo 'export AI_GATEWAY_API_KEY="<your-api-key>"' >> ~/.zshrc
 source ~/.zshrc
 ```
 
+(Use `~/.bashrc` if you're on bash instead of zsh.)
+
+### Windows — PowerShell
+
+```powershell
+# Just for this terminal session
+$env:AI_GATEWAY_API_KEY = "<your-api-key>"
+
+# Persistent for your user (survives reboots, all future shells see it)
+[Environment]::SetEnvironmentVariable("AI_GATEWAY_API_KEY", "<your-api-key>", "User")
+```
+
+After the persistent version, **close and reopen** PowerShell so new shells inherit the variable. To verify: `echo $env:AI_GATEWAY_API_KEY`.
+
+### Windows — cmd.exe
+
+```bat
+:: Just for this terminal session
+set AI_GATEWAY_API_KEY=<your-api-key>
+
+:: Persistent (for your user)
+setx AI_GATEWAY_API_KEY "<your-api-key>"
+```
+
+`setx` only affects **new** shells — your current `cmd` window won't see it until you reopen.
+
+### Windows — Git Bash / WSL
+
+Same as macOS/Linux: `export ...` and append to `~/.bashrc`.
+
 Don't paste your key into a chat. Don't commit it. Don't print it on a t-shirt. Standard stuff.
 
 ---
 
 ## Step 2: Add the Provider
 
-Open (or create) `~/.config/opencode/opencode.json` and drop this in:
+Open (or create) your OpenCode config file:
 
-> Config file locations and the full schema live in the official docs: <https://opencode.ai/docs/config>. Provider shape (`npm`, `options`, `models`) is documented at <https://opencode.ai/docs/providers>.
+| OS | Path |
+|---|---|
+| macOS / Linux | `~/.config/opencode/opencode.json` |
+| Windows (PowerShell / cmd) | `%USERPROFILE%\.config\opencode\opencode.json` — i.e. `C:\Users\<you>\.config\opencode\opencode.json` |
+| Windows (Git Bash / WSL) | `~/.config/opencode/opencode.json` (resolves to the same place from a Bash shell) |
+
+> OpenCode follows the XDG convention even on Windows — the config lives under `.config` in your home directory, **not** in `%APPDATA%`. If the folder doesn't exist, create it. Config schema reference: <https://opencode.ai/docs/config>. Provider shape (`npm`, `options`, `models`) is documented at <https://opencode.ai/docs/providers>.
+
+Drop this in:
 
 ```json
 {
@@ -272,12 +339,34 @@ OpenCode is mostly about text and tools. For images, video, and TTS, the cleanes
 
 Then `/image a teapot in space` in the TUI and the agent will call something like:
 
+**macOS / Linux / Git Bash / WSL:**
+
 ```bash
 curl -X POST "https://ai-gateway-eastus2.azure-api.net/openai/v1/images/generations" \
   -H "api-key: $AI_GATEWAY_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{"model":"gpt-image-2","prompt":"a teapot in space","size":"1024x1024","quality":"high","output_format":"png"}' \
   | jq -r '.data[0].b64_json' | base64 --decode > out.png
+```
+
+**Windows PowerShell** (no `jq`, no `base64` — but PowerShell has both built in):
+
+```powershell
+$body = @{
+  model         = "gpt-image-2"
+  prompt        = "a teapot in space"
+  size          = "1024x1024"
+  quality       = "high"
+  output_format = "png"
+} | ConvertTo-Json
+
+$resp = Invoke-RestMethod `
+  -Method Post `
+  -Uri "https://ai-gateway-eastus2.azure-api.net/openai/v1/images/generations" `
+  -Headers @{ "api-key" = $env:AI_GATEWAY_API_KEY; "Content-Type" = "application/json" } `
+  -Body $body
+
+[IO.File]::WriteAllBytes("out.png", [Convert]::FromBase64String($resp.data[0].b64_json))
 ```
 
 For full image/video/audio reference, see [`AI_GATEWAY_CONSUMER_GUIDE.md`](AI_GATEWAY_CONSUMER_GUIDE.md) and [`IMAGE_MODEL_USAGE.md`](IMAGE_MODEL_USAGE.md).
@@ -295,6 +384,11 @@ For full image/video/audio reference, see [`AI_GATEWAY_CONSUMER_GUIDE.md`](AI_GA
 | `Unsupported parameter: max_tokens` | GPT-5-family chat completions | OpenCode usually handles this for you; if you hit it from a custom command, switch to `max_completion_tokens` |
 | Streaming feels slow | First token latency on big reasoning models | Try a smaller variant: `gpt-5.4-mini` instead of `gpt-5.4-pro` |
 | FLUX models don't show up | They aren't on the OpenAI-shaped path | They live on `/admin-m8fg494d-eastus2/providers/blackforestlabs/...`; call them via curl, not via OpenCode's chat |
+| **Windows:** `opencode: command not found` | Installer ran but PATH not refreshed | Close and reopen the terminal. If still broken, add `%LOCALAPPDATA%\Programs\opencode` to user PATH |
+| **Windows:** Key set with `setx` but OpenCode says 401 | `setx` only affects **new** shells | Open a fresh PowerShell / cmd window and re-run OpenCode |
+| **Windows:** Config file "not found" even though it exists | Saved it to `%APPDATA%` instead of `~/.config` | Move it to `%USERPROFILE%\.config\opencode\opencode.json` |
+| **Windows:** Garbled box-drawing characters in the TUI | Legacy `cmd.exe` console | Use Windows Terminal or PowerShell 7 |
+| **Windows:** `irm | iex` blocked | Execution policy too strict | `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass` and retry in the same session |
 
 ---
 
