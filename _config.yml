@@ -1,5 +1,7 @@
 title: AI Gateway Starter Kit
 description: Azure AI Foundry instructions, guides, and integration docs. One key, many models, zero portal tours.
+baseurl: /foundry_instructions
+url: https://nepomuceno.github.io
 
 markdown: kramdown
 kramdown:
