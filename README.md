@@ -16,6 +16,7 @@ This repo is your map. Pick a guide below and start shipping.
 |---|---|
 | A human with a curl habit | [`AI_GATEWAY_CONSUMER_GUIDE.md`](AI_GATEWAY_CONSUMER_GUIDE.md) |
 | Using OpenCode and want `gpt-5.4` in your TUI | [`OPENCODE_INTEGRATION.md`](OPENCODE_INTEGRATION.md) |
+| Using GitHub Copilot and want gateway models in VS Code | [`GITHUB_COPILOT_INTEGRATION.md`](GITHUB_COPILOT_INTEGRATION.md) |
 | Generating images and want to know what sizes work | [`IMAGE_MODEL_USAGE.md`](IMAGE_MODEL_USAGE.md) |
 | The person who set this up (you know who you are) | [`AZURE_AI_FOUNDRY_ACCESS.md`](AZURE_AI_FOUNDRY_ACCESS.md) |
 | A skeptic who wants to see proof every model works | [`tests/model-support-summary.md`](tests/model-support-summary.md) |
@@ -129,6 +130,7 @@ The full OpenCode setup (more models, reasoning variants, plan/build agents, ima
 |---|---|
 | [`AI_GATEWAY_CONSUMER_GUIDE.md`](AI_GATEWAY_CONSUMER_GUIDE.md) | The "I just want to call stuff" guide. Curl examples for every model class. |
 | [`OPENCODE_INTEGRATION.md`](OPENCODE_INTEGRATION.md) | Drop the gateway into OpenCode. Variants, agents, project configs, common errors. |
+| [`GITHUB_COPILOT_INTEGRATION.md`](GITHUB_COPILOT_INTEGRATION.md) | Use the gateway as a BYOK provider inside GitHub Copilot Chat (VS Code, JetBrains, etc.). |
 | [`IMAGE_MODEL_USAGE.md`](IMAGE_MODEL_USAGE.md) | Pixel-pushing reference. Sizes, formats, the difference between `size` and `width`/`height`. |
 | [`AZURE_AI_FOUNDRY_ACCESS.md`](AZURE_AI_FOUNDRY_ACCESS.md) | Owner-side overview. Probably not interesting unless you're me. |
 | [`tests/model-support-summary.md`](tests/model-support-summary.md) | Per-model evidence: what works, what's grumpy, what's wonderful. |

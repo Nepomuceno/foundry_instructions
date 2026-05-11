@@ -4,6 +4,45 @@ You like OpenCode. You have an API key. You want `gpt-5.4` to write code in your
 
 This takes about 2 minutes if your config file already exists. About 3 minutes if it doesn't and you also have to remember where `~/.config` is.
 
+> **Official OpenCode docs you should bookmark:**
+> - Install: <https://opencode.ai/docs/> · <https://opencode.ai/docs/install>
+> - Config file reference: <https://opencode.ai/docs/config>
+> - Providers (this is the important one): <https://opencode.ai/docs/providers>
+> - Models & variants: <https://opencode.ai/docs/models>
+> - Agents: <https://opencode.ai/docs/agents>
+> - Custom commands: <https://opencode.ai/docs/commands>
+> - Keybinds (for `variant_cycle`): <https://opencode.ai/docs/keybinds>
+>
+> This guide is the gateway-flavored shortcut. The pages above are the source of truth.
+
+---
+
+## Step 0: Install OpenCode
+
+If you don't have it yet, pick one (full list at <https://opencode.ai/docs/install>):
+
+```bash
+# macOS / Linux — recommended installer
+curl -fsSL https://opencode.ai/install | bash
+
+# Homebrew
+brew install sst/tap/opencode
+
+# npm (global)
+npm install -g opencode-ai
+
+# Windows (PowerShell)
+irm https://opencode.ai/install.ps1 | iex
+```
+
+Verify:
+
+```bash
+opencode --version
+```
+
+If `opencode` isn't on your PATH, the installer prints a one-line fix at the end — re-read it.
+
 ---
 
 ## What You Get
@@ -40,6 +79,8 @@ Don't paste your key into a chat. Don't commit it. Don't print it on a t-shirt. 
 ## Step 2: Add the Provider
 
 Open (or create) `~/.config/opencode/opencode.json` and drop this in:
+
+> Config file locations and the full schema live in the official docs: <https://opencode.ai/docs/config>. Provider shape (`npm`, `options`, `models`) is documented at <https://opencode.ai/docs/providers>.
 
 ```json
 {
@@ -130,6 +171,8 @@ When in doubt: `gpt-5.4-mini`.
 
 GPT-5-family models support different reasoning effort levels. Expose them as OpenCode variants and cycle with one keypress:
 
+> Variants reference: <https://opencode.ai/docs/models#variants>. Keybinds (incl. `variant_cycle`): <https://opencode.ai/docs/keybinds>.
+
 ```jsonc
 {
   "$schema": "https://opencode.ai/config.json",
@@ -163,6 +206,8 @@ Now use the `variant_cycle` keybind in TUI to flip between effort levels mid-tas
 ## Specialized Agents
 
 OpenCode lets you wire different agents to different models. Plan with the smart slow one, build with the fast one:
+
+> Agent config and the full tool-permission matrix: <https://opencode.ai/docs/agents>.
 
 ```jsonc
 {
@@ -208,6 +253,8 @@ This is safe to commit. The key still lives in your environment, not in the file
 ## Bonus: Image / Video / Audio From OpenCode
 
 OpenCode is mostly about text and tools. For images, video, and TTS, the cleanest move is to expose a custom command that calls the gateway via `bash`. Example:
+
+> Custom commands reference: <https://opencode.ai/docs/commands>.
 
 ```jsonc
 {
@@ -262,7 +309,25 @@ For full image/video/audio reference, see [`AI_GATEWAY_CONSUMER_GUIDE.md`](AI_GA
 
 ## See Also
 
+**In this repo:**
+
 - [README](README.md) — entrance + architecture diagrams
 - [`AI_GATEWAY_CONSUMER_GUIDE.md`](AI_GATEWAY_CONSUMER_GUIDE.md) — raw curl examples for everything
 - [`IMAGE_MODEL_USAGE.md`](IMAGE_MODEL_USAGE.md) — image-specific reference
-- OpenCode docs: <https://opencode.ai/docs/providers>, <https://opencode.ai/docs/models>, <https://opencode.ai/docs/config>
+- [`GITHUB_COPILOT_INTEGRATION.md`](GITHUB_COPILOT_INTEGRATION.md) — same gateway, but for GitHub Copilot Chat
+
+**Official OpenCode documentation:**
+
+- Home & install: <https://opencode.ai/docs/>
+- Config schema: <https://opencode.ai/docs/config>
+- Providers: <https://opencode.ai/docs/providers>
+- Models & variants: <https://opencode.ai/docs/models>
+- Agents: <https://opencode.ai/docs/agents>
+- Custom commands: <https://opencode.ai/docs/commands>
+- Keybinds: <https://opencode.ai/docs/keybinds>
+- GitHub repo (source / issues): <https://github.com/sst/opencode>
+
+**Upstream SDK this guide relies on:**
+
+- `@ai-sdk/openai-compatible` — the Vercel AI SDK provider OpenCode uses to talk to OpenAI-shaped APIs: <https://ai-sdk.dev/providers/openai-compatible-providers>
+

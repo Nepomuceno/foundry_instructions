@@ -17,6 +17,7 @@ exclude:
   - AZURE_AI_FOUNDRY_ACCESS.md
   - IMAGE_MODEL_USAGE.md
   - OPENCODE_INTEGRATION.md
+  - GITHUB_COPILOT_INTEGRATION.md
   - LICENSE
   - hero.png
   - Gemfile
