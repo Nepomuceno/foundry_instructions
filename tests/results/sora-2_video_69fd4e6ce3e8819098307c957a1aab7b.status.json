@@ -1,0 +1,11 @@
+{
+  "id": "video_69fd4e6ce3e8819098307c957a1aab7b",
+  "status": "completed",
+  "progress": 100,
+  "completed_at": 1778208413,
+  "error": null,
+  "expires_at": 1778294764,
+  "model": "sora-2",
+  "seconds": "4",
+  "size": "720x1280"
+}

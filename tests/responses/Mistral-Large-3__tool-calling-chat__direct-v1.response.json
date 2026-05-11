@@ -1,0 +1,35 @@
+{
+  "id": "52ce39672c39457bac44d7927d17d61a",
+  "model": "mistral-large-3",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "id": "pUyBBxs3h",
+            "index": 0,
+            "type": "function",
+            "function": {
+              "name": "report_weather",
+              "arguments": "{\"city\": \"Paris\"}"
+            }
+          }
+        ]
+      },
+      "finish_reason": "tool_calls",
+      "content_filter_results": {}
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 70,
+    "completion_tokens": 12,
+    "total_tokens": 82,
+    "audio_prompt_tokens": 0
+  },
+  "created": 1778191238,
+  "object": "chat.completion",
+  "prompt_filter_results": null
+}

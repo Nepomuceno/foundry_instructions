@@ -1,0 +1,23 @@
+{
+  "deployment": "grok-4-fast-reasoning",
+  "category": "chat-completions",
+  "gateway": "https://ai-gateway-eastus2.azure-api.net",
+  "method": "POST",
+  "url": "https://ai-gateway-eastus2.azure-api.net/openai/deployments/grok-4-fast-reasoning/chat/completions?api-version=2024-10-21",
+  "apiVersion": "2024-10-21",
+  "auth": "APIM subscription key in api-key header; value intentionally not saved",
+  "requestBody": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Reply with OK only."
+      }
+    ],
+    "max_tokens": 2
+  },
+  "startedAt": "2026-05-07T21:22:00Z",
+  "endedAt": "2026-05-07T21:22:00Z",
+  "status": "failed",
+  "httpStatus": 400,
+  "responseFile": "grok-4-fast-reasoning.response.json"
+}

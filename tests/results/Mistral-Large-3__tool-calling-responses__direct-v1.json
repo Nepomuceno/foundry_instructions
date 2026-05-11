@@ -1,0 +1,38 @@
+{
+  "deployment": "Mistral-Large-3",
+  "capability": "tool-calling-responses",
+  "transport": "direct-v1",
+  "method": "POST",
+  "url": "https://admin-m8fg494d-eastus2.openai.azure.com/openai/v1/responses",
+  "auth": "Microsoft Entra ID bearer token; value intentionally not saved",
+  "request": {
+    "model": "Mistral-Large-3",
+    "input": "Use the tool to report the weather for Paris.",
+    "tools": [
+      {
+        "type": "function",
+        "name": "report_weather",
+        "description": "Report weather",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "city": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "city"
+          ]
+        }
+      }
+    ],
+    "tool_choice": "auto",
+    "max_output_tokens": 512
+  },
+  "startedAt": "2026-05-07T22:00:38Z",
+  "endedAt": "2026-05-07T22:00:38Z",
+  "status": "failed",
+  "httpStatus": 400,
+  "responseFile": "Mistral-Large-3__tool-calling-responses__direct-v1.response.json",
+  "notes": "Tool calling probe using Responses API function tools."
+}

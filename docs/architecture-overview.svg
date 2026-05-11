@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" width="1200" height="480">
+  <defs>
+    <marker id="a" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+      <polygon points="0,0 7,3.5 0,7" fill="#0F0F10"/>
+    </marker>
+    <marker id="b" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+      <polygon points="0,0 7,3.5 0,7" fill="#FF6A00"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="480" fill="#F3F3F0" stroke="#0F0F10" stroke-width="3"/>
+
+  <rect x="0" y="0" width="1200" height="36" fill="#0F0F10"/>
+  <text x="16" y="24" font-family="'IBM Plex Mono', monospace" font-size="14" fill="#F3F3F0" font-weight="bold">foundry-instructions</text>
+  <text x="1184" y="24" font-family="'IBM Plex Mono', monospace" font-size="11" fill="#C8C8C0" text-anchor="end">Azure AI Foundry &#183; APIM gateway &#183; consumer access</text>
+
+  <rect x="40" y="52" width="1120" height="26" fill="none" stroke="#C8C8C0" stroke-width="1"/>
+  <text x="56" y="69" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#7A7A72">consumers hold only an APIM key &#183; owner manages Foundry &#183; gateway brokers every call</text>
+
+  <rect x="40" y="94" width="260" height="320" fill="none" stroke="#0F0F10" stroke-width="2"/>
+  <rect x="40" y="94" width="260" height="28" fill="#0F0F10"/>
+  <text x="170" y="112" font-family="'IBM Plex Mono', monospace" font-size="11" fill="#F3F3F0" text-anchor="middle" font-weight="bold">CONSUMERS</text>
+
+  <text x="56" y="142" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#0F0F10" font-weight="bold">apps &amp; tools</text>
+  <text x="56" y="158" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#7A7A72">  curl / fetch clients</text>
+  <text x="56" y="172" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#7A7A72">  OpenCode (TUI / CLI)</text>
+  <text x="56" y="186" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#7A7A72">  custom integrations</text>
+
+  <line x1="56" y1="200" x2="284" y2="200" stroke="#C8C8C0" stroke-width="0.8"/>
+
+  <text x="56" y="218" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#0F0F10" font-weight="bold">credential</text>
+  <text x="56" y="234" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#7A7A72">  api-key header only</text>
+  <text x="56" y="248" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#7A7A72">  no Azure portal access</text>
+  <text x="56" y="262" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#7A7A72">  no Entra tokens</text>
+
+  <line x1="56" y1="276" x2="284" y2="276" stroke="#C8C8C0" stroke-width="0.8"/>
+
+  <text x="56" y="294" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#0F0F10" font-weight="bold">surfaces called</text>
+  <text x="56" y="310" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#7A7A72">  /openai/v1/*</text>
+  <text x="56" y="324" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#7A7A72">  /openai/deployments/*</text>
+  <text x="56" y="338" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#7A7A72">  /admin-m8.../providers/*</text>
+
+  <circle cx="64" cy="392" r="3" fill="#FF6A00"/>
+  <text x="74" y="395" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#7A7A72">consumer-facing only</text>
+
+  <line x1="300" y1="244" x2="360" y2="244" stroke="#0F0F10" stroke-width="1.5" marker-end="url(#a)"/>
+
+  <rect x="370" y="94" width="340" height="320" fill="none" stroke="#0F0F10" stroke-width="2.5"/>
+  <rect x="370" y="94" width="340" height="32" fill="#0F0F10"/>
+  <text x="540" y="115" font-family="'IBM Plex Mono', monospace" font-size="13" fill="#F3F3F0" text-anchor="middle" font-weight="bold">APIM GATEWAY</text>
+
+  <text x="386" y="146" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#0F0F10" font-weight="bold">ai-gateway-eastus2.azure-api.net</text>
+
+  <line x1="386" y1="154" x2="694" y2="154" stroke="#C8C8C0" stroke-width="0.8"/>
+
+  <text x="386" y="172" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#0F0F10" font-weight="bold">key check</text>
+  <text x="386" y="186" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#7A7A72">  api-key header validated</text>
+  <text x="386" y="200" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#7A7A72">  per-subscription quota</text>
+
+  <text x="386" y="222" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#0F0F10" font-weight="bold">routes</text>
+  <text x="386" y="236" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#7A7A72">  /openai          OpenAI-compat</text>
+  <text x="386" y="250" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#7A7A72">  /openai/v1/*     wildcard v1</text>
+  <text x="386" y="264" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#7A7A72">  /admin-m8.../*   pass-through</text>
+
+  <text x="386" y="286" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#0F0F10" font-weight="bold">backend auth</text>
+  <text x="386" y="300" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#7A7A72">  managed identity for</text>
+  <text x="386" y="314" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#7A7A72">  cognitiveservices.azure.com</text>
+
+  <rect x="430" y="334" width="220" height="56" fill="none" stroke="#FF6A00" stroke-width="1.5"/>
+  <text x="540" y="354" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#0F0F10" text-anchor="middle" font-weight="bold">consumer key  &#8594;  managed id</text>
+  <text x="540" y="370" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#7A7A72" text-anchor="middle">no Foundry secret leaves APIM</text>
+  <text x="540" y="384" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#7A7A72" text-anchor="middle">no key auth on Foundry account</text>
+
+  <line x1="710" y1="244" x2="770" y2="244" stroke="#0F0F10" stroke-width="1.5" marker-end="url(#a)"/>
+
+  <rect x="780" y="94" width="380" height="320" fill="none" stroke="#0F0F10" stroke-width="2"/>
+  <rect x="780" y="94" width="380" height="28" fill="#0F0F10"/>
+  <text x="970" y="112" font-family="'IBM Plex Mono', monospace" font-size="11" fill="#F3F3F0" text-anchor="middle" font-weight="bold">FOUNDRY &amp; MODELS</text>
+
+  <text x="796" y="142" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#0F0F10" font-weight="bold">account: admin-m8fg494d-eastus2</text>
+  <text x="796" y="158" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#7A7A72">  AIServices &#183; eastus2 &#183; S0</text>
+
+  <line x1="796" y1="170" x2="1144" y2="170" stroke="#C8C8C0" stroke-width="0.8"/>
+
+  <text x="796" y="188" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#0F0F10" font-weight="bold">text &amp; reasoning</text>
+  <text x="796" y="202" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#7A7A72">  gpt-5.4 / 5.4-mini / 5.4-nano</text>
+  <text x="796" y="216" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#7A7A72">  gpt-5 / 5.2 / 5.1-codex-mini</text>
+  <text x="796" y="230" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#7A7A72">  Mistral-Large-3 &#183; gpt-oss-120b</text>
+  <text x="796" y="244" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#7A7A72">  Grok-4-1 &#183; Grok-4-20 &#183; Phi-4</text>
+
+  <text x="796" y="266" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#0F0F10" font-weight="bold">image</text>
+  <text x="796" y="280" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#7A7A72">  gpt-image-2 (size up to 3840x2160)</text>
+  <text x="796" y="294" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#7A7A72">  gpt-image-1.5 (1024-1536 fixed)</text>
+  <text x="796" y="308" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#7A7A72">  FLUX.2-flex / FLUX.2-pro (BFL)</text>
+
+  <text x="796" y="330" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#0F0F10" font-weight="bold">video &amp; audio</text>
+  <text x="796" y="344" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#7A7A72">  sora-2  &#183;  gpt-audio / 1.5</text>
+  <text x="796" y="358" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#7A7A72">  gpt-4o-mini-tts</text>
+
+  <rect x="796" y="372" width="348" height="28" fill="none" stroke="#FF6A00" stroke-width="1.5"/>
+  <text x="970" y="390" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#0F0F10" text-anchor="middle">local key auth disabled  &#183;  reachable only via APIM or owner Entra</text>
+
+  <line x1="40" y1="438" x2="1160" y2="438" stroke="#C8C8C0" stroke-width="1"/>
+  <text x="600" y="460" font-family="'IBM Plex Mono', monospace" font-size="10" fill="#7A7A72" text-anchor="middle">one APIM key &#183; many models &#183; OpenAI-compatible surface for OpenCode and any HTTP client</text>
+</svg>

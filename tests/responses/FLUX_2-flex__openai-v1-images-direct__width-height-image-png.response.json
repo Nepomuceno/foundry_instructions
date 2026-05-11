@@ -1,0 +1,1 @@
+{"error":{"code":"RateLimitReached","message": "Your requests to FLUX.2-flex for FLUX.2-flex in East US 2 have exceeded the call rate limit for your current AIServices S0 pricing tier. This request was for ImageGenerations_Create under OpenAI Language Model Instance API. To increase your default rate limit, visit: https://aka.ms/oai/quotaincrease."}}

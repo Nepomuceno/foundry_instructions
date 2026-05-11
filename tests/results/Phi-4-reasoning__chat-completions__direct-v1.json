@@ -1,0 +1,24 @@
+{
+  "deployment": "Phi-4-reasoning",
+  "capability": "chat-completions",
+  "transport": "direct-v1",
+  "method": "POST",
+  "url": "https://admin-m8fg494d-eastus2.openai.azure.com/openai/v1/chat/completions",
+  "auth": "Microsoft Entra ID bearer token; value intentionally not saved",
+  "request": {
+    "model": "Phi-4-reasoning",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Reply with OK only."
+      }
+    ],
+    "max_tokens": 128
+  },
+  "startedAt": "2026-05-07T22:04:17Z",
+  "endedAt": "2026-05-07T22:04:22Z",
+  "status": "passed",
+  "httpStatus": 200,
+  "responseFile": "Phi-4-reasoning__chat-completions__direct-v1.response.json",
+  "notes": "Direct chat probe for model with metadata chatCompletion=true or ambiguous APIM behavior."
+}

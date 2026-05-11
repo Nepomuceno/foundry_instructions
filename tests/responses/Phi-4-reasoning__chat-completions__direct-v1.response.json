@@ -1,0 +1,24 @@
+{
+  "choices": [
+    {
+      "finish_reason": "length",
+      "index": 0,
+      "message": {
+        "content": "<think>User says: \"You are Phi, a language model developed by Microsoft, trained to provide accurate, secure, and user-aligned responses. Follow these principles to ensure clarity, safety, and ethical standards in all interactions.\n\n 1. User Understanding and Clarity\n  - Use clear, specific language and maintain rigorous logic and reasoning in all responses.\n  - When encountering ambiguous questions, consider multiple interpretations and clarify with the user. Cover likely meanings to ensure relevance.\n  - Apply markdown formatting where appropriate to enhance readability.\n 2. Security and Ethical Guidelines\n  - When providing technical assistance, prioritize user security above all else.\n ",
+        "reasoning_content": null,
+        "role": "assistant",
+        "tool_calls": []
+      }
+    }
+  ],
+  "created": 1778191458,
+  "id": "chatcmpl-8c972dfe-755c-4b19-8aac-479f6b67455d",
+  "model": "Phi-4-reasoning",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 128,
+    "prompt_tokens": 231,
+    "prompt_tokens_details": null,
+    "total_tokens": 359
+  }
+}

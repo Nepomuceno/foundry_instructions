@@ -1,0 +1,24 @@
+{
+  "id": "94b229130ede45e6a6408419ef6f6d8e",
+  "model": "mistral-large-3",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "OK"
+      },
+      "finish_reason": "stop",
+      "content_filter_results": {}
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 8,
+    "completion_tokens": 2,
+    "total_tokens": 10,
+    "audio_prompt_tokens": 0
+  },
+  "created": 1778191136,
+  "object": "chat.completion",
+  "prompt_filter_results": null
+}

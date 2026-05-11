@@ -1,0 +1,19 @@
+{
+  "deployment": "Cohere-rerank-v4.0-fast",
+  "capability": "responses",
+  "transport": "direct-v1",
+  "method": "POST",
+  "url": "https://admin-m8fg494d-eastus2.openai.azure.com/openai/v1/responses",
+  "auth": "Microsoft Entra ID bearer token; value intentionally not saved",
+  "request": {
+    "model": "Cohere-rerank-v4.0-fast",
+    "input": "Reply with OK only.",
+    "max_output_tokens": 512
+  },
+  "startedAt": "2026-05-07T22:04:17Z",
+  "endedAt": "2026-05-07T22:04:17Z",
+  "status": "failed",
+  "httpStatus": 400,
+  "responseFile": "Cohere-rerank-v4_0-fast__responses__direct-v1.response.json",
+  "notes": "Responses negative/compatibility probe."
+}

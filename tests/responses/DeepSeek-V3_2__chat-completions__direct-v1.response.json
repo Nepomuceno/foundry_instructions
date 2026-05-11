@@ -1,0 +1,24 @@
+{
+  "id": "124c42a474a54081be8d1d943020ccec",
+  "model": "deepseek-v3.2",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "OK"
+      },
+      "finish_reason": "stop",
+      "content_filter_results": {}
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 9,
+    "completion_tokens": 2,
+    "total_tokens": 11,
+    "audio_prompt_tokens": 0
+  },
+  "created": 1778191099,
+  "object": "chat.completion",
+  "prompt_filter_results": null
+}

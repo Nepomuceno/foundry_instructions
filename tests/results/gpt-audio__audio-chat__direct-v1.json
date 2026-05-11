@@ -1,0 +1,32 @@
+{
+  "deployment": "gpt-audio",
+  "capability": "audio-chat",
+  "transport": "direct-v1",
+  "method": "POST",
+  "url": "https://admin-m8fg494d-eastus2.openai.azure.com/openai/v1/chat/completions",
+  "auth": "Microsoft Entra ID bearer token; value intentionally not saved",
+  "request": {
+    "model": "gpt-audio",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Say OK."
+      }
+    ],
+    "modalities": [
+      "text",
+      "audio"
+    ],
+    "audio": {
+      "voice": "alloy",
+      "format": "mp3"
+    },
+    "max_completion_tokens": 128
+  },
+  "startedAt": "2026-05-07T22:04:07Z",
+  "endedAt": "2026-05-07T22:04:09Z",
+  "status": "passed",
+  "httpStatus": 200,
+  "responseFile": "gpt-audio__audio-chat__direct-v1.response.json",
+  "notes": "Audio model probe requesting text plus audio output; response includes base64 audio in JSON."
+}

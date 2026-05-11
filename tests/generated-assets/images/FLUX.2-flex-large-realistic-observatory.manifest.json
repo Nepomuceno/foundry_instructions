@@ -1,0 +1,11 @@
+{
+  "model": "FLUX.2-flex",
+  "prompt": "A breathtaking ultra-realistic cinematic photograph of a futuristic alpine botanical observatory at sunrise, built from warm glass, aged brass, and pale stone into a cliffside above a turquoise glacial lake. Dense wildflower terraces cascade down the architecture, morning mist drifts between pine forests, sunlight catches thousands of dew drops, tiny researchers in elegant outdoor clothing walk along suspended garden bridges, reflections shimmer in the lake, distant snow peaks glow rose gold, extremely detailed natural materials, rich atmospheric depth, beautiful composition, no text, no watermark, no logo.",
+  "requested_width": 2304,
+  "requested_height": 1728,
+  "steps": 50,
+  "guidance": 5,
+  "output_format": "png",
+  "created": 1778209930,
+  "decoded_artifact": "generated-assets/images/FLUX.2-flex-large-realistic-observatory.png"
+}

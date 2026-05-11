@@ -1,0 +1,23 @@
+{
+  "deployment": "DeepSeek-V3.2",
+  "capability": "chat-completions",
+  "transport": "gateway-versioned",
+  "method": "POST",
+  "url": "https://ai-gateway-eastus2.azure-api.net/openai/deployments/DeepSeek-V3.2/chat/completions?api-version=2025-04-01-preview",
+  "auth": "APIM subscription key in api-key header; value intentionally not saved",
+  "request": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Reply with OK only."
+      }
+    ],
+    "max_tokens": 128
+  },
+  "startedAt": "2026-05-07T21:58:19Z",
+  "endedAt": "2026-05-07T21:58:41Z",
+  "status": "passed",
+  "httpStatus": 200,
+  "responseFile": "DeepSeek-V3_2__chat-completions__gateway-versioned.response.json",
+  "notes": "Gateway versioned chat-completions probe."
+}

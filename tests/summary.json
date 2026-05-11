@@ -1,0 +1,137 @@
+[
+  {
+    "deployment": "gpt-4o",
+    "status": "passed",
+    "httpStatus": 200
+  },
+  {
+    "deployment": "gpt-4.1",
+    "status": "passed",
+    "httpStatus": 200
+  },
+  {
+    "deployment": "gpt-5-chat",
+    "status": "passed",
+    "httpStatus": 200
+  },
+  {
+    "deployment": "gpt-5-mini",
+    "status": "failed",
+    "httpStatus": 400
+  },
+  {
+    "deployment": "gpt-5",
+    "status": "failed",
+    "httpStatus": 400
+  },
+  {
+    "deployment": "gpt-5.2",
+    "status": "failed",
+    "httpStatus": 400
+  },
+  {
+    "deployment": "gpt-oss-120b",
+    "status": "passed",
+    "httpStatus": 200
+  },
+  {
+    "deployment": "Phi-4-reasoning",
+    "status": "failed",
+    "httpStatus": 500
+  },
+  {
+    "deployment": "DeepSeek-V3.2",
+    "status": "passed",
+    "httpStatus": 200
+  },
+  {
+    "deployment": "gpt-5.4",
+    "status": "failed",
+    "httpStatus": 400
+  },
+  {
+    "deployment": "Kimi-K2.5",
+    "status": "passed",
+    "httpStatus": 200
+  },
+  {
+    "deployment": "grok-4-fast-reasoning",
+    "status": "failed",
+    "httpStatus": 400
+  },
+  {
+    "deployment": "ModelRouter",
+    "status": "failed",
+    "httpStatus": 400
+  },
+  {
+    "deployment": "gpt-5.4-pro",
+    "status": "failed",
+    "httpStatus": 400
+  },
+  {
+    "deployment": "grok-4-20-reasoning",
+    "status": "passed",
+    "httpStatus": 200
+  },
+  {
+    "deployment": "Mistral-Large-3",
+    "status": "passed",
+    "httpStatus": 200
+  },
+  {
+    "deployment": "grok-4-1-fast-reasoning",
+    "status": "passed",
+    "httpStatus": 200
+  },
+  {
+    "deployment": "gpt-5.4-mini",
+    "status": "failed",
+    "httpStatus": 400
+  },
+  {
+    "deployment": "gpt-5.1-codex-mini",
+    "status": "failed",
+    "httpStatus": 404
+  },
+  {
+    "deployment": "gpt-5.4-nano",
+    "status": "failed",
+    "httpStatus": 404
+  },
+  {
+    "deployment": "gpt-4o-mini-tts",
+    "status": "failed",
+    "httpStatus": 404
+  },
+  {
+    "deployment": "gpt-audio",
+    "status": "failed",
+    "httpStatus": 404
+  },
+  {
+    "deployment": "gpt-audio-1.5",
+    "status": "failed",
+    "httpStatus": 404
+  },
+  {
+    "deployment": "gpt-image-1.5",
+    "status": "passed",
+    "httpStatus": 200
+  },
+  {
+    "deployment": "gpt-image-2",
+    "status": "passed",
+    "httpStatus": 200
+  },
+  {
+    "deployment": "FLUX.2-flex",
+    "status": "failed",
+    "httpStatus": 404
+  },
+  {
+    "deployment": "FLUX.2-pro",
+    "status": "failed",
+    "httpStatus": 404
+  }
+]

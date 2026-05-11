@@ -1,0 +1,19 @@
+{
+  "deployment": "gpt-5.4-mini",
+  "capability": "responses",
+  "transport": "direct-v1",
+  "method": "POST",
+  "url": "https://admin-m8fg494d-eastus2.openai.azure.com/openai/v1/responses",
+  "auth": "Microsoft Entra ID bearer token; value intentionally not saved",
+  "request": {
+    "model": "gpt-5.4-mini",
+    "input": "Reply with OK only.",
+    "max_output_tokens": 512
+  },
+  "startedAt": "2026-05-07T22:00:09Z",
+  "endedAt": "2026-05-07T22:00:11Z",
+  "status": "passed",
+  "httpStatus": 200,
+  "responseFile": "gpt-5_4-mini__responses__direct-v1.response.json",
+  "notes": "Responses API positive probe from deployment metadata/catalog where applicable."
+}

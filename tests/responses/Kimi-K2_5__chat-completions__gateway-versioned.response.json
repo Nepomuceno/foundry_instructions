@@ -1,0 +1,25 @@
+{
+  "id": "6e2e8bf7331c433f8fc0c00df96eca00",
+  "model": "Kimi-K2.5",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "OK",
+        "reasoning_content": "The user wants a reply with \"OK\" only. No other text, no explanations, no formatting, just the word \"OK\".\n\nThis is a straightforward request. I should respond with exactly \"OK\" and nothing else."
+      },
+      "finish_reason": "stop",
+      "content_filter_results": {}
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 13,
+    "completion_tokens": 48,
+    "total_tokens": 61,
+    "audio_prompt_tokens": 0
+  },
+  "created": 1778191123,
+  "object": "chat.completion",
+  "prompt_filter_results": null
+}

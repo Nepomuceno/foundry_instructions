@@ -1,0 +1,35 @@
+{
+  "deployment": "gpt-4o",
+  "capability": "image-input-chat",
+  "transport": "direct-v1",
+  "method": "POST",
+  "url": "https://admin-m8fg494d-eastus2.openai.azure.com/openai/v1/chat/completions",
+  "auth": "Microsoft Entra ID bearer token; value intentionally not saved",
+  "request": {
+    "model": "gpt-4o",
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "What is the dominant color in this image? Reply one word."
+          },
+          {
+            "type": "image_url",
+            "image_url": {
+              "url": "https://dummyimage.com/64x64/0000ff/0000ff.png"
+            }
+          }
+        ]
+      }
+    ],
+    "max_tokens": 32
+  },
+  "startedAt": "2026-05-07T22:00:15Z",
+  "endedAt": "2026-05-07T22:00:17Z",
+  "status": "passed",
+  "httpStatus": 200,
+  "responseFile": "gpt-4o__image-input-chat__direct-v1.response.json",
+  "notes": "Image input capability probe using chat content parts."
+}

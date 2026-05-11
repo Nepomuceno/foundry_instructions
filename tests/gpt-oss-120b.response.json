@@ -1,0 +1,24 @@
+{
+  "id": "6ea7f9cb86a34955853cd5e23ba1a345",
+  "model": "gpt-oss-120b",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": ""
+      },
+      "finish_reason": "length",
+      "content_filter_results": {}
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 72,
+    "completion_tokens": 2,
+    "total_tokens": 74,
+    "audio_prompt_tokens": 0
+  },
+  "created": 1778188686,
+  "object": "chat.completion",
+  "prompt_filter_results": null
+}

@@ -1,0 +1,10 @@
+{
+  "created": 1778209128,
+  "model": null,
+  "data_count": 1,
+  "first_item_keys": [
+    "b64_json"
+  ],
+  "decoded_artifact": "generated-assets/images/FLUX.2-flex-blue-dot.png",
+  "output_format": "png"
+}

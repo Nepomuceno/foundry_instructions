@@ -1,0 +1,19 @@
+{
+  "deployment": "gpt-5.4-pro",
+  "capability": "responses",
+  "transport": "gateway-versioned",
+  "method": "POST",
+  "url": "https://ai-gateway-eastus2.azure-api.net/openai/responses?api-version=2025-04-01-preview",
+  "auth": "APIM subscription key in api-key header; value intentionally not saved",
+  "request": {
+    "model": "gpt-5.4-pro",
+    "input": "Reply with OK only.",
+    "max_output_tokens": 512
+  },
+  "startedAt": "2026-05-07T22:00:02Z",
+  "endedAt": "2026-05-07T22:00:09Z",
+  "status": "passed",
+  "httpStatus": 200,
+  "responseFile": "gpt-5_4-pro__responses__gateway-versioned.response.json",
+  "notes": "Gateway versioned Responses API probe; APIM does not expose /openai/v1."
+}

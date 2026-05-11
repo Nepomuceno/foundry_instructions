@@ -1,0 +1,20 @@
+{
+  "deployment": "FLUX.2-pro",
+  "capability": "image-generations",
+  "transport": "gateway-versioned",
+  "method": "POST",
+  "url": "https://ai-gateway-eastus2.azure-api.net/openai/deployments/FLUX.2-pro/images/generations?api-version=2025-04-01-preview",
+  "auth": "APIM subscription key in api-key header; value intentionally not saved",
+  "request": {
+    "model": "FLUX.2-pro",
+    "prompt": "A single blue dot on a plain white background.",
+    "n": 1,
+    "size": "1024x1024"
+  },
+  "startedAt": "2026-05-07T22:04:05Z",
+  "endedAt": "2026-05-07T22:04:06Z",
+  "status": "failed",
+  "httpStatus": 404,
+  "responseFile": "FLUX_2-pro__image-generations__gateway-versioned.response.txt",
+  "notes": "Image generation probe through gateway versioned Azure OpenAI API."
+}

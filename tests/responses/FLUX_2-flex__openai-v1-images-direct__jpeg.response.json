@@ -1,0 +1,1 @@
+{"error":{"code":"invalid_property_value","message":"Property output_format has an invalid value: jpeg. Allowed values are: null ,image/png ,image/jpeg ,image/webp.","details":"Property output_format has an invalid value: jpeg. Allowed values are: null ,image/png ,image/jpeg ,image/webp."}}

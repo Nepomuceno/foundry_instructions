@@ -1,0 +1,37 @@
+{
+  "id": "e7b2991d-bff6-453e-8dce-890dcfd61d26",
+  "model": "grok-4-1-fast-reasoning",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "OK"
+      },
+      "finish_reason": "length",
+      "content_filter_results": {}
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 5,
+    "completion_tokens": 1,
+    "total_tokens": 683,
+    "audio_prompt_tokens": 0,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0,
+      "text_tokens": 5,
+      "image_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 677,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "num_sources_used": 0
+  },
+  "created": 1778188931,
+  "object": "chat.completion",
+  "prompt_filter_results": null
+}

@@ -1,0 +1,19 @@
+{
+  "deployment": "gpt-5.1-codex-mini",
+  "category": "responses",
+  "gateway": "https://ai-gateway-eastus2.azure-api.net",
+  "method": "POST",
+  "url": "https://ai-gateway-eastus2.azure-api.net/openai/responses?api-version=2024-10-21",
+  "apiVersion": "2024-10-21",
+  "auth": "APIM subscription key in api-key header; value intentionally not saved",
+  "requestBody": {
+    "model": "gpt-5.1-codex-mini",
+    "input": "Reply with OK only.",
+    "max_output_tokens": 2
+  },
+  "startedAt": "2026-05-07T21:22:12Z",
+  "endedAt": "2026-05-07T21:22:12Z",
+  "status": "failed",
+  "httpStatus": 404,
+  "responseFile": "gpt-5_1-codex-mini.response.json"
+}

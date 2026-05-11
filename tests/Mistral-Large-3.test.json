@@ -1,0 +1,23 @@
+{
+  "deployment": "Mistral-Large-3",
+  "category": "chat-completions",
+  "gateway": "https://ai-gateway-eastus2.azure-api.net",
+  "method": "POST",
+  "url": "https://ai-gateway-eastus2.azure-api.net/openai/deployments/Mistral-Large-3/chat/completions?api-version=2024-10-21",
+  "apiVersion": "2024-10-21",
+  "auth": "APIM subscription key in api-key header; value intentionally not saved",
+  "requestBody": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Reply with OK only."
+      }
+    ],
+    "max_tokens": 2
+  },
+  "startedAt": "2026-05-07T21:22:06Z",
+  "endedAt": "2026-05-07T21:22:07Z",
+  "status": "passed",
+  "httpStatus": 200,
+  "responseFile": "Mistral-Large-3.response.json"
+}

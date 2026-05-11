@@ -1,0 +1,24 @@
+{
+  "deployment": "Cohere-rerank-v4.0-fast",
+  "capability": "chat-completions",
+  "transport": "direct-v1",
+  "method": "POST",
+  "url": "https://admin-m8fg494d-eastus2.openai.azure.com/openai/v1/chat/completions",
+  "auth": "Microsoft Entra ID bearer token; value intentionally not saved",
+  "request": {
+    "model": "Cohere-rerank-v4.0-fast",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Reply with OK only."
+      }
+    ],
+    "max_tokens": 128
+  },
+  "startedAt": "2026-05-07T22:04:16Z",
+  "endedAt": "2026-05-07T22:04:17Z",
+  "status": "failed",
+  "httpStatus": 404,
+  "responseFile": "Cohere-rerank-v4_0-fast__chat-completions__direct-v1.response.txt",
+  "notes": "Direct chat probe for model with metadata chatCompletion=true or ambiguous APIM behavior."
+}

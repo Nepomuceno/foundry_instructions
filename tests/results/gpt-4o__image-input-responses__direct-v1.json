@@ -1,0 +1,33 @@
+{
+  "deployment": "gpt-4o",
+  "capability": "image-input-responses",
+  "transport": "direct-v1",
+  "method": "POST",
+  "url": "https://admin-m8fg494d-eastus2.openai.azure.com/openai/v1/responses",
+  "auth": "Microsoft Entra ID bearer token; value intentionally not saved",
+  "request": {
+    "model": "gpt-4o",
+    "input": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "input_text",
+            "text": "What is the dominant color in this image? Reply one word."
+          },
+          {
+            "type": "input_image",
+            "image_url": "https://dummyimage.com/64x64/0000ff/0000ff.png"
+          }
+        ]
+      }
+    ],
+    "max_output_tokens": 256
+  },
+  "startedAt": "2026-05-07T22:00:17Z",
+  "endedAt": "2026-05-07T22:00:19Z",
+  "status": "passed",
+  "httpStatus": 200,
+  "responseFile": "gpt-4o__image-input-responses__direct-v1.response.json",
+  "notes": "Image input capability probe using Responses API input_image."
+}

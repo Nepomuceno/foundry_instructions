@@ -1,0 +1,25 @@
+{
+  "id": "ac4acb9dc0ca4b208d13a5998f7032fc",
+  "model": "Kimi-K2.5",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "",
+        "reasoning_content": "The user is asking me to reply with \"OK only\". This is a straightforward instruction. I should just respond with \"OK\" and nothing else. No extra text, no punctuation beyond what's necessary, just \"OK\".\n\nWait, let me check if there are any hidden tricks or nuances. The user said \"Reply with OK only.\" This could mean:\n1. Reply with just the word \"OK\"\n2. Reply with \"OK\" as the only content (no additional text)\n\nEither way, the response should be simply: OK\n\nI should not add any other text, explanations, or formatting. Just the two letters O and K"
+      },
+      "finish_reason": "length",
+      "content_filter_results": {}
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 13,
+    "completion_tokens": 128,
+    "total_tokens": 141,
+    "audio_prompt_tokens": 0
+  },
+  "created": 1778191122,
+  "object": "chat.completion",
+  "prompt_filter_results": null
+}

@@ -1,0 +1,89 @@
+{
+  "choices": [
+    {
+      "content_filter_results": {},
+      "finish_reason": "tool_calls",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "annotations": [],
+        "content": null,
+        "refusal": null,
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"city\":\"Paris\"}",
+              "name": "report_weather"
+            },
+            "id": "call_B0t3ZbbWWdTqacdp7VIGlOmG",
+            "type": "function"
+          }
+        ]
+      }
+    }
+  ],
+  "created": 1778191234,
+  "id": "chatcmpl-Dd13i8CHCxGfyuyJleqkw8tXcUmCx",
+  "model": "gpt-5.4-nano-2026-03-17",
+  "object": "chat.completion",
+  "prompt_filter_results": [
+    {
+      "prompt_index": 0,
+      "content_filter_results": {
+        "hate": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "indirect_attack": {
+          "detected": false,
+          "filtered": false
+        },
+        "jailbreak": {
+          "detected": false,
+          "filtered": false
+        },
+        "self_harm": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "sexual": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "violence": {
+          "filtered": false,
+          "severity": "safe"
+        }
+      }
+    }
+  ],
+  "service_tier": "default",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 18,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "latency_checkpoint": {
+      "engine_tbt_ms": 13,
+      "engine_ttft_ms": 49,
+      "engine_ttlt_ms": 277,
+      "pre_inference_ms": 84,
+      "service_tbt_ms": 13,
+      "service_ttft_ms": 574,
+      "service_ttlt_ms": 798,
+      "total_duration_ms": 720,
+      "user_visible_ttft_ms": 490
+    },
+    "prompt_tokens": 131,
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    },
+    "total_tokens": 149
+  }
+}

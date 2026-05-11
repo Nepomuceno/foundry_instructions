@@ -1,0 +1,20 @@
+{
+  "deployment": "gpt-image-1.5",
+  "capability": "image-generations",
+  "transport": "gateway-versioned",
+  "method": "POST",
+  "url": "https://ai-gateway-eastus2.azure-api.net/openai/deployments/gpt-image-1.5/images/generations?api-version=2025-04-01-preview",
+  "auth": "APIM subscription key in api-key header; value intentionally not saved",
+  "request": {
+    "model": "gpt-image-1.5",
+    "prompt": "A single blue dot on a plain white background.",
+    "n": 1,
+    "size": "1024x1024"
+  },
+  "startedAt": "2026-05-07T22:00:39Z",
+  "endedAt": "2026-05-07T22:01:01Z",
+  "status": "passed",
+  "httpStatus": 200,
+  "responseFile": "gpt-image-1_5__image-generations__gateway-versioned.response.json",
+  "notes": "Image generation probe through gateway versioned Azure OpenAI API."
+}

@@ -1,0 +1,38 @@
+{
+  "deployment": "gpt-5.4-nano",
+  "capability": "tool-calling-responses",
+  "transport": "direct-v1",
+  "method": "POST",
+  "url": "https://admin-m8fg494d-eastus2.openai.azure.com/openai/v1/responses",
+  "auth": "Microsoft Entra ID bearer token; value intentionally not saved",
+  "request": {
+    "model": "gpt-5.4-nano",
+    "input": "Use the tool to report the weather for Paris.",
+    "tools": [
+      {
+        "type": "function",
+        "name": "report_weather",
+        "description": "Report weather",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "city": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "city"
+          ]
+        }
+      }
+    ],
+    "tool_choice": "auto",
+    "max_output_tokens": 512
+  },
+  "startedAt": "2026-05-07T22:00:35Z",
+  "endedAt": "2026-05-07T22:00:37Z",
+  "status": "passed",
+  "httpStatus": 200,
+  "responseFile": "gpt-5_4-nano__tool-calling-responses__direct-v1.response.json",
+  "notes": "Tool calling probe using Responses API function tools."
+}

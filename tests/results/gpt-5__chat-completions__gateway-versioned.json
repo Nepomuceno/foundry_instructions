@@ -1,0 +1,23 @@
+{
+  "deployment": "gpt-5",
+  "capability": "chat-completions",
+  "transport": "gateway-versioned",
+  "method": "POST",
+  "url": "https://ai-gateway-eastus2.azure-api.net/openai/deployments/gpt-5/chat/completions?api-version=2025-04-01-preview",
+  "auth": "APIM subscription key in api-key header; value intentionally not saved",
+  "request": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Reply with OK only."
+      }
+    ],
+    "max_completion_tokens": 512
+  },
+  "startedAt": "2026-05-07T21:59:07Z",
+  "endedAt": "2026-05-07T21:59:10Z",
+  "status": "passed",
+  "httpStatus": 200,
+  "responseFile": "gpt-5__chat-completions__gateway-versioned.response.json",
+  "notes": "Gateway versioned chat-completions probe using max_completion_tokens."
+}

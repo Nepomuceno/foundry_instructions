@@ -1,0 +1,749 @@
+[
+  {
+    "deployment": "Cohere-rerank-v4.0-fast",
+    "capability": "chat-completions",
+    "transport": "direct-v1",
+    "status": "failed",
+    "httpStatus": 404,
+    "responseFile": "Cohere-rerank-v4_0-fast__chat-completions__direct-v1.response.txt",
+    "notes": "Direct chat probe for model with metadata chatCompletion=true or ambiguous APIM behavior."
+  },
+  {
+    "deployment": "Cohere-rerank-v4.0-fast",
+    "capability": "responses",
+    "transport": "direct-v1",
+    "status": "failed",
+    "httpStatus": 400,
+    "responseFile": "Cohere-rerank-v4_0-fast__responses__direct-v1.response.json",
+    "notes": "Responses negative/compatibility probe."
+  },
+  {
+    "deployment": "DeepSeek-V3.2",
+    "capability": "chat-completions",
+    "transport": "direct-v1",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "DeepSeek-V3_2__chat-completions__direct-v1.response.json",
+    "notes": "Primary chat-completion probe using v1 API."
+  },
+  {
+    "deployment": "DeepSeek-V3.2",
+    "capability": "chat-completions",
+    "transport": "gateway-versioned",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "DeepSeek-V3_2__chat-completions__gateway-versioned.response.json",
+    "notes": "Gateway versioned chat-completions probe."
+  },
+  {
+    "deployment": "FLUX.2-flex",
+    "capability": "image-generations",
+    "transport": "gateway-versioned",
+    "status": "failed",
+    "httpStatus": 404,
+    "responseFile": "FLUX_2-flex__image-generations__gateway-versioned.response.txt",
+    "notes": "Image generation probe through gateway versioned Azure OpenAI API."
+  },
+  {
+    "deployment": "FLUX.2-pro",
+    "capability": "image-generations",
+    "transport": "gateway-versioned",
+    "status": "failed",
+    "httpStatus": 404,
+    "responseFile": "FLUX_2-pro__image-generations__gateway-versioned.response.txt",
+    "notes": "Image generation probe through gateway versioned Azure OpenAI API."
+  },
+  {
+    "deployment": "gpt-4.1",
+    "capability": "chat-completions",
+    "transport": "direct-v1",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-4_1__chat-completions__direct-v1.response.json",
+    "notes": "Primary chat-completion probe using v1 API."
+  },
+  {
+    "deployment": "gpt-4.1",
+    "capability": "chat-completions",
+    "transport": "gateway-versioned",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-4_1__chat-completions__gateway-versioned.response.json",
+    "notes": "Gateway versioned chat-completions probe."
+  },
+  {
+    "deployment": "gpt-4.1",
+    "capability": "responses",
+    "transport": "direct-v1",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-4_1__responses__direct-v1.response.json",
+    "notes": "Responses API positive probe from deployment metadata/catalog where applicable."
+  },
+  {
+    "deployment": "gpt-4.1",
+    "capability": "responses",
+    "transport": "gateway-versioned",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-4_1__responses__gateway-versioned.response.json",
+    "notes": "Gateway versioned Responses API probe; APIM does not expose /openai/v1."
+  },
+  {
+    "deployment": "gpt-4.1",
+    "capability": "tool-calling-chat",
+    "transport": "direct-v1",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-4_1__tool-calling-chat__direct-v1.response.json",
+    "notes": "Tool calling probe using chat/completions function tools."
+  },
+  {
+    "deployment": "gpt-4.1",
+    "capability": "tool-calling-responses",
+    "transport": "direct-v1",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-4_1__tool-calling-responses__direct-v1.response.json",
+    "notes": "Tool calling probe using Responses API function tools."
+  },
+  {
+    "deployment": "gpt-4o",
+    "capability": "chat-completions",
+    "transport": "direct-v1",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-4o__chat-completions__direct-v1.response.json",
+    "notes": "Primary chat-completion probe using v1 API."
+  },
+  {
+    "deployment": "gpt-4o",
+    "capability": "chat-completions",
+    "transport": "gateway-versioned",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-4o__chat-completions__gateway-versioned.response.json",
+    "notes": "Gateway versioned chat-completions probe."
+  },
+  {
+    "deployment": "gpt-4o",
+    "capability": "image-input-chat",
+    "transport": "direct-v1",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-4o__image-input-chat__direct-v1.response.json",
+    "notes": "Image input capability probe using chat content parts."
+  },
+  {
+    "deployment": "gpt-4o",
+    "capability": "image-input-responses",
+    "transport": "direct-v1",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-4o__image-input-responses__direct-v1.response.json",
+    "notes": "Image input capability probe using Responses API input_image."
+  },
+  {
+    "deployment": "gpt-4o",
+    "capability": "responses",
+    "transport": "direct-v1",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-4o__responses__direct-v1.response.json",
+    "notes": "Responses API positive probe from deployment metadata/catalog where applicable."
+  },
+  {
+    "deployment": "gpt-4o",
+    "capability": "responses",
+    "transport": "gateway-versioned",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-4o__responses__gateway-versioned.response.json",
+    "notes": "Gateway versioned Responses API probe; APIM does not expose /openai/v1."
+  },
+  {
+    "deployment": "gpt-4o-mini-tts",
+    "capability": "audio-speech",
+    "transport": "gateway-versioned",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-4o-mini-tts__audio-speech__gateway-versioned.mp3",
+    "notes": "TTS probe; binary MP3 saved when successful."
+  },
+  {
+    "deployment": "gpt-5",
+    "capability": "chat-completions",
+    "transport": "direct-v1",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-5__chat-completions__direct-v1.response.json",
+    "notes": "Primary chat-completion probe using max_completion_tokens for reasoning models."
+  },
+  {
+    "deployment": "gpt-5",
+    "capability": "chat-completions",
+    "transport": "gateway-versioned",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-5__chat-completions__gateway-versioned.response.json",
+    "notes": "Gateway versioned chat-completions probe using max_completion_tokens."
+  },
+  {
+    "deployment": "gpt-5",
+    "capability": "responses",
+    "transport": "direct-v1",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-5__responses__direct-v1.response.json",
+    "notes": "Responses API positive probe from deployment metadata/catalog where applicable."
+  },
+  {
+    "deployment": "gpt-5",
+    "capability": "responses",
+    "transport": "gateway-versioned",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-5__responses__gateway-versioned.response.json",
+    "notes": "Gateway versioned Responses API probe; APIM does not expose /openai/v1."
+  },
+  {
+    "deployment": "gpt-5",
+    "capability": "tool-calling-chat",
+    "transport": "direct-v1",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-5__tool-calling-chat__direct-v1.response.json",
+    "notes": "Tool calling probe using chat/completions function tools with max_completion_tokens."
+  },
+  {
+    "deployment": "gpt-5",
+    "capability": "tool-calling-responses",
+    "transport": "direct-v1",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-5__tool-calling-responses__direct-v1.response.json",
+    "notes": "Tool calling probe using Responses API function tools."
+  },
+  {
+    "deployment": "gpt-5.1-codex-mini",
+    "capability": "responses",
+    "transport": "direct-v1",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-5_1-codex-mini__responses__direct-v1.response.json",
+    "notes": "Responses API positive probe from deployment metadata/catalog where applicable."
+  },
+  {
+    "deployment": "gpt-5.1-codex-mini",
+    "capability": "responses",
+    "transport": "gateway-versioned",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-5_1-codex-mini__responses__gateway-versioned.response.json",
+    "notes": "Gateway versioned Responses API probe; APIM does not expose /openai/v1."
+  },
+  {
+    "deployment": "gpt-5.2",
+    "capability": "chat-completions",
+    "transport": "direct-v1",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-5_2__chat-completions__direct-v1.response.json",
+    "notes": "Primary chat-completion probe using max_completion_tokens for reasoning models."
+  },
+  {
+    "deployment": "gpt-5.2",
+    "capability": "chat-completions",
+    "transport": "gateway-versioned",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-5_2__chat-completions__gateway-versioned.response.json",
+    "notes": "Gateway versioned chat-completions probe using max_completion_tokens."
+  },
+  {
+    "deployment": "gpt-5.2",
+    "capability": "responses",
+    "transport": "direct-v1",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-5_2__responses__direct-v1.response.json",
+    "notes": "Responses API positive probe from deployment metadata/catalog where applicable."
+  },
+  {
+    "deployment": "gpt-5.2",
+    "capability": "responses",
+    "transport": "gateway-versioned",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-5_2__responses__gateway-versioned.response.json",
+    "notes": "Gateway versioned Responses API probe; APIM does not expose /openai/v1."
+  },
+  {
+    "deployment": "gpt-5.4",
+    "capability": "chat-completions",
+    "transport": "direct-v1",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-5_4__chat-completions__direct-v1.response.json",
+    "notes": "Primary chat-completion probe using max_completion_tokens for reasoning models."
+  },
+  {
+    "deployment": "gpt-5.4",
+    "capability": "chat-completions",
+    "transport": "gateway-versioned",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-5_4__chat-completions__gateway-versioned.response.json",
+    "notes": "Gateway versioned chat-completions probe using max_completion_tokens."
+  },
+  {
+    "deployment": "gpt-5.4",
+    "capability": "responses",
+    "transport": "direct-v1",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-5_4__responses__direct-v1.response.json",
+    "notes": "Responses API positive probe from deployment metadata/catalog where applicable."
+  },
+  {
+    "deployment": "gpt-5.4",
+    "capability": "responses",
+    "transport": "gateway-versioned",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-5_4__responses__gateway-versioned.response.json",
+    "notes": "Gateway versioned Responses API probe; APIM does not expose /openai/v1."
+  },
+  {
+    "deployment": "gpt-5.4-mini",
+    "capability": "chat-completions",
+    "transport": "direct-v1",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-5_4-mini__chat-completions__direct-v1.response.json",
+    "notes": "Primary chat-completion probe using max_completion_tokens for reasoning models."
+  },
+  {
+    "deployment": "gpt-5.4-mini",
+    "capability": "chat-completions",
+    "transport": "gateway-versioned",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-5_4-mini__chat-completions__gateway-versioned.response.json",
+    "notes": "Gateway versioned chat-completions probe using max_completion_tokens."
+  },
+  {
+    "deployment": "gpt-5.4-mini",
+    "capability": "responses",
+    "transport": "direct-v1",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-5_4-mini__responses__direct-v1.response.json",
+    "notes": "Responses API positive probe from deployment metadata/catalog where applicable."
+  },
+  {
+    "deployment": "gpt-5.4-mini",
+    "capability": "responses",
+    "transport": "gateway-versioned",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-5_4-mini__responses__gateway-versioned.response.json",
+    "notes": "Gateway versioned Responses API probe; APIM does not expose /openai/v1."
+  },
+  {
+    "deployment": "gpt-5.4-nano",
+    "capability": "chat-completions",
+    "transport": "direct-v1",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-5_4-nano__chat-completions__direct-v1.response.json",
+    "notes": "Primary chat-completion probe using max_completion_tokens for reasoning models."
+  },
+  {
+    "deployment": "gpt-5.4-nano",
+    "capability": "chat-completions",
+    "transport": "gateway-versioned",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-5_4-nano__chat-completions__gateway-versioned.response.json",
+    "notes": "Gateway versioned chat-completions probe using max_completion_tokens."
+  },
+  {
+    "deployment": "gpt-5.4-nano",
+    "capability": "image-input-chat",
+    "transport": "direct-v1",
+    "status": "failed",
+    "httpStatus": 400,
+    "responseFile": "gpt-5_4-nano__image-input-chat__direct-v1.response.json",
+    "notes": "Image input capability probe using chat content parts."
+  },
+  {
+    "deployment": "gpt-5.4-nano",
+    "capability": "image-input-responses",
+    "transport": "direct-v1",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-5_4-nano__image-input-responses__direct-v1.response.json",
+    "notes": "Image input capability probe using Responses API input_image."
+  },
+  {
+    "deployment": "gpt-5.4-nano",
+    "capability": "responses",
+    "transport": "direct-v1",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-5_4-nano__responses__direct-v1.response.json",
+    "notes": "Responses API positive probe from deployment metadata/catalog where applicable."
+  },
+  {
+    "deployment": "gpt-5.4-nano",
+    "capability": "responses",
+    "transport": "gateway-versioned",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-5_4-nano__responses__gateway-versioned.response.json",
+    "notes": "Gateway versioned Responses API probe; APIM does not expose /openai/v1."
+  },
+  {
+    "deployment": "gpt-5.4-nano",
+    "capability": "tool-calling-chat",
+    "transport": "direct-v1",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-5_4-nano__tool-calling-chat__direct-v1.response.json",
+    "notes": "Tool calling probe using chat/completions function tools with max_completion_tokens."
+  },
+  {
+    "deployment": "gpt-5.4-nano",
+    "capability": "tool-calling-responses",
+    "transport": "direct-v1",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-5_4-nano__tool-calling-responses__direct-v1.response.json",
+    "notes": "Tool calling probe using Responses API function tools."
+  },
+  {
+    "deployment": "gpt-5.4-pro",
+    "capability": "responses",
+    "transport": "direct-v1",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-5_4-pro__responses__direct-v1.response.json",
+    "notes": "Responses API positive probe from deployment metadata/catalog where applicable."
+  },
+  {
+    "deployment": "gpt-5.4-pro",
+    "capability": "responses",
+    "transport": "gateway-versioned",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-5_4-pro__responses__gateway-versioned.response.json",
+    "notes": "Gateway versioned Responses API probe; APIM does not expose /openai/v1."
+  },
+  {
+    "deployment": "gpt-5-chat",
+    "capability": "chat-completions",
+    "transport": "direct-v1",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-5-chat__chat-completions__direct-v1.response.json",
+    "notes": "Primary chat-completion probe using v1 API."
+  },
+  {
+    "deployment": "gpt-5-chat",
+    "capability": "chat-completions",
+    "transport": "gateway-versioned",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-5-chat__chat-completions__gateway-versioned.response.json",
+    "notes": "Gateway versioned chat-completions probe."
+  },
+  {
+    "deployment": "gpt-5-chat",
+    "capability": "responses",
+    "transport": "direct-v1",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-5-chat__responses__direct-v1.response.json",
+    "notes": "Responses API positive probe from deployment metadata/catalog where applicable."
+  },
+  {
+    "deployment": "gpt-5-chat",
+    "capability": "responses",
+    "transport": "gateway-versioned",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-5-chat__responses__gateway-versioned.response.json",
+    "notes": "Gateway versioned Responses API probe; APIM does not expose /openai/v1."
+  },
+  {
+    "deployment": "gpt-5-mini",
+    "capability": "chat-completions",
+    "transport": "direct-v1",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-5-mini__chat-completions__direct-v1.response.json",
+    "notes": "Primary chat-completion probe using max_completion_tokens for reasoning models."
+  },
+  {
+    "deployment": "gpt-5-mini",
+    "capability": "chat-completions",
+    "transport": "gateway-versioned",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-5-mini__chat-completions__gateway-versioned.response.json",
+    "notes": "Gateway versioned chat-completions probe using max_completion_tokens."
+  },
+  {
+    "deployment": "gpt-5-mini",
+    "capability": "responses",
+    "transport": "direct-v1",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-5-mini__responses__direct-v1.response.json",
+    "notes": "Responses API positive probe from deployment metadata/catalog where applicable."
+  },
+  {
+    "deployment": "gpt-5-mini",
+    "capability": "responses",
+    "transport": "gateway-versioned",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-5-mini__responses__gateway-versioned.response.json",
+    "notes": "Gateway versioned Responses API probe; APIM does not expose /openai/v1."
+  },
+  {
+    "deployment": "gpt-audio",
+    "capability": "audio-chat",
+    "transport": "direct-v1",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-audio__audio-chat__direct-v1.response.json",
+    "notes": "Audio model probe requesting text plus audio output; response includes base64 audio in JSON."
+  },
+  {
+    "deployment": "gpt-audio",
+    "capability": "audio-chat",
+    "transport": "gateway-versioned",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-audio__audio-chat__gateway-versioned.response.json",
+    "notes": "Gateway audio model probe requesting text plus audio output."
+  },
+  {
+    "deployment": "gpt-audio-1.5",
+    "capability": "audio-chat",
+    "transport": "direct-v1",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-audio-1_5__audio-chat__direct-v1.response.json",
+    "notes": "Audio model probe requesting text plus audio output; response includes base64 audio in JSON."
+  },
+  {
+    "deployment": "gpt-audio-1.5",
+    "capability": "audio-chat",
+    "transport": "gateway-versioned",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-audio-1_5__audio-chat__gateway-versioned.response.json",
+    "notes": "Gateway audio model probe requesting text plus audio output."
+  },
+  {
+    "deployment": "gpt-image-1.5",
+    "capability": "image-generations",
+    "transport": "gateway-versioned",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-image-1_5__image-generations__gateway-versioned.response.json",
+    "notes": "Image generation probe through gateway versioned Azure OpenAI API."
+  },
+  {
+    "deployment": "gpt-image-2",
+    "capability": "image-generations",
+    "transport": "gateway-versioned",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-image-2__image-generations__gateway-versioned.response.json",
+    "notes": "Image generation probe through gateway versioned Azure OpenAI API."
+  },
+  {
+    "deployment": "gpt-oss-120b",
+    "capability": "chat-completions",
+    "transport": "direct-v1",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-oss-120b__chat-completions__direct-v1.response.json",
+    "notes": "Primary chat-completion probe using v1 API."
+  },
+  {
+    "deployment": "gpt-oss-120b",
+    "capability": "chat-completions",
+    "transport": "gateway-versioned",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "gpt-oss-120b__chat-completions__gateway-versioned.response.json",
+    "notes": "Gateway versioned chat-completions probe."
+  },
+  {
+    "deployment": "grok-4-1-fast-reasoning",
+    "capability": "chat-completions",
+    "transport": "direct-v1",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "grok-4-1-fast-reasoning__chat-completions__direct-v1.response.json",
+    "notes": "Primary chat-completion probe using v1 API."
+  },
+  {
+    "deployment": "grok-4-1-fast-reasoning",
+    "capability": "chat-completions",
+    "transport": "gateway-versioned",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "grok-4-1-fast-reasoning__chat-completions__gateway-versioned.response.json",
+    "notes": "Gateway versioned chat-completions probe."
+  },
+  {
+    "deployment": "grok-4-20-reasoning",
+    "capability": "chat-completions",
+    "transport": "direct-v1",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "grok-4-20-reasoning__chat-completions__direct-v1.response.json",
+    "notes": "Primary chat-completion probe using v1 API."
+  },
+  {
+    "deployment": "grok-4-20-reasoning",
+    "capability": "chat-completions",
+    "transport": "gateway-versioned",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "grok-4-20-reasoning__chat-completions__gateway-versioned.response.json",
+    "notes": "Gateway versioned chat-completions probe."
+  },
+  {
+    "deployment": "grok-4-fast-reasoning",
+    "capability": "chat-completions",
+    "transport": "direct-v1",
+    "status": "failed",
+    "httpStatus": 400,
+    "responseFile": "grok-4-fast-reasoning__chat-completions__direct-v1.response.json",
+    "notes": "Primary chat-completion probe using v1 API."
+  },
+  {
+    "deployment": "grok-4-fast-reasoning",
+    "capability": "chat-completions",
+    "transport": "gateway-versioned",
+    "status": "failed",
+    "httpStatus": 400,
+    "responseFile": "grok-4-fast-reasoning__chat-completions__gateway-versioned.response.json",
+    "notes": "Gateway versioned chat-completions probe."
+  },
+  {
+    "deployment": "Kimi-K2.5",
+    "capability": "chat-completions",
+    "transport": "direct-v1",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "Kimi-K2_5__chat-completions__direct-v1.response.json",
+    "notes": "Primary chat-completion probe using v1 API."
+  },
+  {
+    "deployment": "Kimi-K2.5",
+    "capability": "chat-completions",
+    "transport": "gateway-versioned",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "Kimi-K2_5__chat-completions__gateway-versioned.response.json",
+    "notes": "Gateway versioned chat-completions probe."
+  },
+  {
+    "deployment": "Mistral-Large-3",
+    "capability": "chat-completions",
+    "transport": "direct-v1",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "Mistral-Large-3__chat-completions__direct-v1.response.json",
+    "notes": "Primary chat-completion probe using v1 API."
+  },
+  {
+    "deployment": "Mistral-Large-3",
+    "capability": "chat-completions",
+    "transport": "gateway-versioned",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "Mistral-Large-3__chat-completions__gateway-versioned.response.json",
+    "notes": "Gateway versioned chat-completions probe."
+  },
+  {
+    "deployment": "Mistral-Large-3",
+    "capability": "tool-calling-chat",
+    "transport": "direct-v1",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "Mistral-Large-3__tool-calling-chat__direct-v1.response.json",
+    "notes": "Tool calling probe using chat/completions function tools."
+  },
+  {
+    "deployment": "Mistral-Large-3",
+    "capability": "tool-calling-responses",
+    "transport": "direct-v1",
+    "status": "failed",
+    "httpStatus": 400,
+    "responseFile": "Mistral-Large-3__tool-calling-responses__direct-v1.response.json",
+    "notes": "Tool calling probe using Responses API function tools."
+  },
+  {
+    "deployment": "ModelRouter",
+    "capability": "chat-completions",
+    "transport": "direct-v1",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "ModelRouter__chat-completions__direct-v1.response.json",
+    "notes": "Primary chat-completion probe using v1 API."
+  },
+  {
+    "deployment": "ModelRouter",
+    "capability": "chat-completions",
+    "transport": "gateway-versioned",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "ModelRouter__chat-completions__gateway-versioned.response.json",
+    "notes": "Gateway versioned chat-completions probe."
+  },
+  {
+    "deployment": "Phi-4-reasoning",
+    "capability": "chat-completions",
+    "transport": "direct-v1",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "Phi-4-reasoning__chat-completions__direct-v1.response.json",
+    "notes": "Direct chat probe for model with metadata chatCompletion=true or ambiguous APIM behavior."
+  },
+  {
+    "deployment": "Phi-4-reasoning",
+    "capability": "responses",
+    "transport": "direct-v1",
+    "status": "failed",
+    "httpStatus": 400,
+    "responseFile": "Phi-4-reasoning__responses__direct-v1.response.json",
+    "notes": "Responses negative/compatibility probe."
+  },
+  {
+    "deployment": "sora-2",
+    "capability": "video-generation-job",
+    "transport": "direct-v1",
+    "status": "passed",
+    "httpStatus": 200,
+    "responseFile": "sora-2__video-generation-job__direct-v1.response.json",
+    "notes": "Sora 2 documented v1 video creation route; creates an async job only."
+  },
+  {
+    "deployment": "sora-2",
+    "capability": "video-generation-job",
+    "transport": "gateway-v1",
+    "status": "failed",
+    "httpStatus": 404,
+    "responseFile": "sora-2__video-generation-job__gateway-v1.response.json",
+    "notes": "Gateway v1 video probe; expected to fail unless APIM imports /openai/v1."
+  }
+]

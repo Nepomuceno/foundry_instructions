@@ -1,0 +1,84 @@
+Deployment	Capability	Transport	Status	HTTP	Response File	Notes
+Cohere-rerank-v4.0-fast	chat-completions	direct-v1	failed	404	Cohere-rerank-v4_0-fast__chat-completions__direct-v1.response.txt	Direct chat probe for model with metadata chatCompletion=true or ambiguous APIM behavior.
+Cohere-rerank-v4.0-fast	responses	direct-v1	failed	400	Cohere-rerank-v4_0-fast__responses__direct-v1.response.json	Responses negative/compatibility probe.
+DeepSeek-V3.2	chat-completions	direct-v1	passed	200	DeepSeek-V3_2__chat-completions__direct-v1.response.json	Primary chat-completion probe using v1 API.
+DeepSeek-V3.2	chat-completions	gateway-versioned	passed	200	DeepSeek-V3_2__chat-completions__gateway-versioned.response.json	Gateway versioned chat-completions probe.
+FLUX.2-flex	image-generations	gateway-versioned	failed	404	FLUX_2-flex__image-generations__gateway-versioned.response.txt	Image generation probe through gateway versioned Azure OpenAI API.
+FLUX.2-pro	image-generations	gateway-versioned	failed	404	FLUX_2-pro__image-generations__gateway-versioned.response.txt	Image generation probe through gateway versioned Azure OpenAI API.
+gpt-4.1	chat-completions	direct-v1	passed	200	gpt-4_1__chat-completions__direct-v1.response.json	Primary chat-completion probe using v1 API.
+gpt-4.1	chat-completions	gateway-versioned	passed	200	gpt-4_1__chat-completions__gateway-versioned.response.json	Gateway versioned chat-completions probe.
+gpt-4.1	responses	direct-v1	passed	200	gpt-4_1__responses__direct-v1.response.json	Responses API positive probe from deployment metadata/catalog where applicable.
+gpt-4.1	responses	gateway-versioned	passed	200	gpt-4_1__responses__gateway-versioned.response.json	Gateway versioned Responses API probe; APIM does not expose /openai/v1.
+gpt-4.1	tool-calling-chat	direct-v1	passed	200	gpt-4_1__tool-calling-chat__direct-v1.response.json	Tool calling probe using chat/completions function tools.
+gpt-4.1	tool-calling-responses	direct-v1	passed	200	gpt-4_1__tool-calling-responses__direct-v1.response.json	Tool calling probe using Responses API function tools.
+gpt-4o	chat-completions	direct-v1	passed	200	gpt-4o__chat-completions__direct-v1.response.json	Primary chat-completion probe using v1 API.
+gpt-4o	chat-completions	gateway-versioned	passed	200	gpt-4o__chat-completions__gateway-versioned.response.json	Gateway versioned chat-completions probe.
+gpt-4o	image-input-chat	direct-v1	passed	200	gpt-4o__image-input-chat__direct-v1.response.json	Image input capability probe using chat content parts.
+gpt-4o	image-input-responses	direct-v1	passed	200	gpt-4o__image-input-responses__direct-v1.response.json	Image input capability probe using Responses API input_image.
+gpt-4o	responses	direct-v1	passed	200	gpt-4o__responses__direct-v1.response.json	Responses API positive probe from deployment metadata/catalog where applicable.
+gpt-4o	responses	gateway-versioned	passed	200	gpt-4o__responses__gateway-versioned.response.json	Gateway versioned Responses API probe; APIM does not expose /openai/v1.
+gpt-4o-mini-tts	audio-speech	gateway-versioned	passed	200	gpt-4o-mini-tts__audio-speech__gateway-versioned.mp3	TTS probe; binary MP3 saved when successful.
+gpt-5	chat-completions	direct-v1	passed	200	gpt-5__chat-completions__direct-v1.response.json	Primary chat-completion probe using max_completion_tokens for reasoning models.
+gpt-5	chat-completions	gateway-versioned	passed	200	gpt-5__chat-completions__gateway-versioned.response.json	Gateway versioned chat-completions probe using max_completion_tokens.
+gpt-5	responses	direct-v1	passed	200	gpt-5__responses__direct-v1.response.json	Responses API positive probe from deployment metadata/catalog where applicable.
+gpt-5	responses	gateway-versioned	passed	200	gpt-5__responses__gateway-versioned.response.json	Gateway versioned Responses API probe; APIM does not expose /openai/v1.
+gpt-5	tool-calling-chat	direct-v1	passed	200	gpt-5__tool-calling-chat__direct-v1.response.json	Tool calling probe using chat/completions function tools with max_completion_tokens.
+gpt-5	tool-calling-responses	direct-v1	passed	200	gpt-5__tool-calling-responses__direct-v1.response.json	Tool calling probe using Responses API function tools.
+gpt-5.1-codex-mini	responses	direct-v1	passed	200	gpt-5_1-codex-mini__responses__direct-v1.response.json	Responses API positive probe from deployment metadata/catalog where applicable.
+gpt-5.1-codex-mini	responses	gateway-versioned	passed	200	gpt-5_1-codex-mini__responses__gateway-versioned.response.json	Gateway versioned Responses API probe; APIM does not expose /openai/v1.
+gpt-5.2	chat-completions	direct-v1	passed	200	gpt-5_2__chat-completions__direct-v1.response.json	Primary chat-completion probe using max_completion_tokens for reasoning models.
+gpt-5.2	chat-completions	gateway-versioned	passed	200	gpt-5_2__chat-completions__gateway-versioned.response.json	Gateway versioned chat-completions probe using max_completion_tokens.
+gpt-5.2	responses	direct-v1	passed	200	gpt-5_2__responses__direct-v1.response.json	Responses API positive probe from deployment metadata/catalog where applicable.
+gpt-5.2	responses	gateway-versioned	passed	200	gpt-5_2__responses__gateway-versioned.response.json	Gateway versioned Responses API probe; APIM does not expose /openai/v1.
+gpt-5.4	chat-completions	direct-v1	passed	200	gpt-5_4__chat-completions__direct-v1.response.json	Primary chat-completion probe using max_completion_tokens for reasoning models.
+gpt-5.4	chat-completions	gateway-versioned	passed	200	gpt-5_4__chat-completions__gateway-versioned.response.json	Gateway versioned chat-completions probe using max_completion_tokens.
+gpt-5.4	responses	direct-v1	passed	200	gpt-5_4__responses__direct-v1.response.json	Responses API positive probe from deployment metadata/catalog where applicable.
+gpt-5.4	responses	gateway-versioned	passed	200	gpt-5_4__responses__gateway-versioned.response.json	Gateway versioned Responses API probe; APIM does not expose /openai/v1.
+gpt-5.4-mini	chat-completions	direct-v1	passed	200	gpt-5_4-mini__chat-completions__direct-v1.response.json	Primary chat-completion probe using max_completion_tokens for reasoning models.
+gpt-5.4-mini	chat-completions	gateway-versioned	passed	200	gpt-5_4-mini__chat-completions__gateway-versioned.response.json	Gateway versioned chat-completions probe using max_completion_tokens.
+gpt-5.4-mini	responses	direct-v1	passed	200	gpt-5_4-mini__responses__direct-v1.response.json	Responses API positive probe from deployment metadata/catalog where applicable.
+gpt-5.4-mini	responses	gateway-versioned	passed	200	gpt-5_4-mini__responses__gateway-versioned.response.json	Gateway versioned Responses API probe; APIM does not expose /openai/v1.
+gpt-5.4-nano	chat-completions	direct-v1	passed	200	gpt-5_4-nano__chat-completions__direct-v1.response.json	Primary chat-completion probe using max_completion_tokens for reasoning models.
+gpt-5.4-nano	chat-completions	gateway-versioned	passed	200	gpt-5_4-nano__chat-completions__gateway-versioned.response.json	Gateway versioned chat-completions probe using max_completion_tokens.
+gpt-5.4-nano	image-input-chat	direct-v1	failed	400	gpt-5_4-nano__image-input-chat__direct-v1.response.json	Image input capability probe using chat content parts.
+gpt-5.4-nano	image-input-responses	direct-v1	passed	200	gpt-5_4-nano__image-input-responses__direct-v1.response.json	Image input capability probe using Responses API input_image.
+gpt-5.4-nano	responses	direct-v1	passed	200	gpt-5_4-nano__responses__direct-v1.response.json	Responses API positive probe from deployment metadata/catalog where applicable.
+gpt-5.4-nano	responses	gateway-versioned	passed	200	gpt-5_4-nano__responses__gateway-versioned.response.json	Gateway versioned Responses API probe; APIM does not expose /openai/v1.
+gpt-5.4-nano	tool-calling-chat	direct-v1	passed	200	gpt-5_4-nano__tool-calling-chat__direct-v1.response.json	Tool calling probe using chat/completions function tools with max_completion_tokens.
+gpt-5.4-nano	tool-calling-responses	direct-v1	passed	200	gpt-5_4-nano__tool-calling-responses__direct-v1.response.json	Tool calling probe using Responses API function tools.
+gpt-5.4-pro	responses	direct-v1	passed	200	gpt-5_4-pro__responses__direct-v1.response.json	Responses API positive probe from deployment metadata/catalog where applicable.
+gpt-5.4-pro	responses	gateway-versioned	passed	200	gpt-5_4-pro__responses__gateway-versioned.response.json	Gateway versioned Responses API probe; APIM does not expose /openai/v1.
+gpt-5-chat	chat-completions	direct-v1	passed	200	gpt-5-chat__chat-completions__direct-v1.response.json	Primary chat-completion probe using v1 API.
+gpt-5-chat	chat-completions	gateway-versioned	passed	200	gpt-5-chat__chat-completions__gateway-versioned.response.json	Gateway versioned chat-completions probe.
+gpt-5-chat	responses	direct-v1	passed	200	gpt-5-chat__responses__direct-v1.response.json	Responses API positive probe from deployment metadata/catalog where applicable.
+gpt-5-chat	responses	gateway-versioned	passed	200	gpt-5-chat__responses__gateway-versioned.response.json	Gateway versioned Responses API probe; APIM does not expose /openai/v1.
+gpt-5-mini	chat-completions	direct-v1	passed	200	gpt-5-mini__chat-completions__direct-v1.response.json	Primary chat-completion probe using max_completion_tokens for reasoning models.
+gpt-5-mini	chat-completions	gateway-versioned	passed	200	gpt-5-mini__chat-completions__gateway-versioned.response.json	Gateway versioned chat-completions probe using max_completion_tokens.
+gpt-5-mini	responses	direct-v1	passed	200	gpt-5-mini__responses__direct-v1.response.json	Responses API positive probe from deployment metadata/catalog where applicable.
+gpt-5-mini	responses	gateway-versioned	passed	200	gpt-5-mini__responses__gateway-versioned.response.json	Gateway versioned Responses API probe; APIM does not expose /openai/v1.
+gpt-audio	audio-chat	direct-v1	passed	200	gpt-audio__audio-chat__direct-v1.response.json	Audio model probe requesting text plus audio output; response includes base64 audio in JSON.
+gpt-audio	audio-chat	gateway-versioned	passed	200	gpt-audio__audio-chat__gateway-versioned.response.json	Gateway audio model probe requesting text plus audio output.
+gpt-audio-1.5	audio-chat	direct-v1	passed	200	gpt-audio-1_5__audio-chat__direct-v1.response.json	Audio model probe requesting text plus audio output; response includes base64 audio in JSON.
+gpt-audio-1.5	audio-chat	gateway-versioned	passed	200	gpt-audio-1_5__audio-chat__gateway-versioned.response.json	Gateway audio model probe requesting text plus audio output.
+gpt-image-1.5	image-generations	gateway-versioned	passed	200	gpt-image-1_5__image-generations__gateway-versioned.response.json	Image generation probe through gateway versioned Azure OpenAI API.
+gpt-image-2	image-generations	gateway-versioned	passed	200	gpt-image-2__image-generations__gateway-versioned.response.json	Image generation probe through gateway versioned Azure OpenAI API.
+gpt-oss-120b	chat-completions	direct-v1	passed	200	gpt-oss-120b__chat-completions__direct-v1.response.json	Primary chat-completion probe using v1 API.
+gpt-oss-120b	chat-completions	gateway-versioned	passed	200	gpt-oss-120b__chat-completions__gateway-versioned.response.json	Gateway versioned chat-completions probe.
+grok-4-1-fast-reasoning	chat-completions	direct-v1	passed	200	grok-4-1-fast-reasoning__chat-completions__direct-v1.response.json	Primary chat-completion probe using v1 API.
+grok-4-1-fast-reasoning	chat-completions	gateway-versioned	passed	200	grok-4-1-fast-reasoning__chat-completions__gateway-versioned.response.json	Gateway versioned chat-completions probe.
+grok-4-20-reasoning	chat-completions	direct-v1	passed	200	grok-4-20-reasoning__chat-completions__direct-v1.response.json	Primary chat-completion probe using v1 API.
+grok-4-20-reasoning	chat-completions	gateway-versioned	passed	200	grok-4-20-reasoning__chat-completions__gateway-versioned.response.json	Gateway versioned chat-completions probe.
+grok-4-fast-reasoning	chat-completions	direct-v1	failed	400	grok-4-fast-reasoning__chat-completions__direct-v1.response.json	Primary chat-completion probe using v1 API.
+grok-4-fast-reasoning	chat-completions	gateway-versioned	failed	400	grok-4-fast-reasoning__chat-completions__gateway-versioned.response.json	Gateway versioned chat-completions probe.
+Kimi-K2.5	chat-completions	direct-v1	passed	200	Kimi-K2_5__chat-completions__direct-v1.response.json	Primary chat-completion probe using v1 API.
+Kimi-K2.5	chat-completions	gateway-versioned	passed	200	Kimi-K2_5__chat-completions__gateway-versioned.response.json	Gateway versioned chat-completions probe.
+Mistral-Large-3	chat-completions	direct-v1	passed	200	Mistral-Large-3__chat-completions__direct-v1.response.json	Primary chat-completion probe using v1 API.
+Mistral-Large-3	chat-completions	gateway-versioned	passed	200	Mistral-Large-3__chat-completions__gateway-versioned.response.json	Gateway versioned chat-completions probe.
+Mistral-Large-3	tool-calling-chat	direct-v1	passed	200	Mistral-Large-3__tool-calling-chat__direct-v1.response.json	Tool calling probe using chat/completions function tools.
+Mistral-Large-3	tool-calling-responses	direct-v1	failed	400	Mistral-Large-3__tool-calling-responses__direct-v1.response.json	Tool calling probe using Responses API function tools.
+ModelRouter	chat-completions	direct-v1	passed	200	ModelRouter__chat-completions__direct-v1.response.json	Primary chat-completion probe using v1 API.
+ModelRouter	chat-completions	gateway-versioned	passed	200	ModelRouter__chat-completions__gateway-versioned.response.json	Gateway versioned chat-completions probe.
+Phi-4-reasoning	chat-completions	direct-v1	passed	200	Phi-4-reasoning__chat-completions__direct-v1.response.json	Direct chat probe for model with metadata chatCompletion=true or ambiguous APIM behavior.
+Phi-4-reasoning	responses	direct-v1	failed	400	Phi-4-reasoning__responses__direct-v1.response.json	Responses negative/compatibility probe.
+sora-2	video-generation-job	direct-v1	passed	200	sora-2__video-generation-job__direct-v1.response.json	Sora 2 documented v1 video creation route; creates an async job only.
+sora-2	video-generation-job	gateway-v1	failed	404	sora-2__video-generation-job__gateway-v1.response.json	Gateway v1 video probe; expected to fail unless APIM imports /openai/v1.

@@ -1,0 +1,8 @@
+{
+  "error": {
+    "message": "Could not finish the message because max_tokens or model output limit was reached. Please try again with higher max_tokens.",
+    "type": "invalid_request_error",
+    "param": null,
+    "code": null
+  }
+}

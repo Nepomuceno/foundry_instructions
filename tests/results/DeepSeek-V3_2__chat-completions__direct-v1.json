@@ -1,0 +1,24 @@
+{
+  "deployment": "DeepSeek-V3.2",
+  "capability": "chat-completions",
+  "transport": "direct-v1",
+  "method": "POST",
+  "url": "https://admin-m8fg494d-eastus2.openai.azure.com/openai/v1/chat/completions",
+  "auth": "Microsoft Entra ID bearer token; value intentionally not saved",
+  "request": {
+    "model": "DeepSeek-V3.2",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Reply with OK only."
+      }
+    ],
+    "max_tokens": 128
+  },
+  "startedAt": "2026-05-07T21:58:18Z",
+  "endedAt": "2026-05-07T21:58:19Z",
+  "status": "passed",
+  "httpStatus": 200,
+  "responseFile": "DeepSeek-V3_2__chat-completions__direct-v1.response.json",
+  "notes": "Primary chat-completion probe using v1 API."
+}

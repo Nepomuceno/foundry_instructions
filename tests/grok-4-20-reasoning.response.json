@@ -1,0 +1,37 @@
+{
+  "id": "672992eb-fd97-4b73-9a9d-820c62a0c6b6",
+  "model": "grok-4.20-beta-0309-reasoning",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "OK\n\n\n"
+      },
+      "finish_reason": "length",
+      "content_filter_results": {}
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 5,
+    "completion_tokens": 2,
+    "total_tokens": 484,
+    "audio_prompt_tokens": 0,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0,
+      "text_tokens": 5,
+      "image_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 477,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "num_sources_used": 0
+  },
+  "created": 1778188926,
+  "object": "chat.completion",
+  "prompt_filter_results": null
+}

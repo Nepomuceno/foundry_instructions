@@ -1,0 +1,20 @@
+{
+  "deployment": "sora-2",
+  "capability": "video-generation-job",
+  "transport": "gateway-v1",
+  "method": "POST",
+  "url": "https://ai-gateway-eastus2.azure-api.net/openai/v1/videos",
+  "auth": "APIM subscription key in api-key header; value intentionally not saved",
+  "request": {
+    "model": "sora-2",
+    "prompt": "A simple blue circle moves slowly across a plain white background.",
+    "seconds": "4",
+    "size": "720x1280"
+  },
+  "startedAt": "2026-05-07T22:04:16Z",
+  "endedAt": "2026-05-07T22:04:16Z",
+  "status": "failed",
+  "httpStatus": 404,
+  "responseFile": "sora-2__video-generation-job__gateway-v1.response.json",
+  "notes": "Gateway v1 video probe; expected to fail unless APIM imports /openai/v1."
+}

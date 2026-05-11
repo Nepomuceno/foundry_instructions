@@ -1,0 +1,19 @@
+{
+  "deployment": "Phi-4-reasoning",
+  "capability": "responses",
+  "transport": "direct-v1",
+  "method": "POST",
+  "url": "https://admin-m8fg494d-eastus2.openai.azure.com/openai/v1/responses",
+  "auth": "Microsoft Entra ID bearer token; value intentionally not saved",
+  "request": {
+    "model": "Phi-4-reasoning",
+    "input": "Reply with OK only.",
+    "max_output_tokens": 512
+  },
+  "startedAt": "2026-05-07T22:04:23Z",
+  "endedAt": "2026-05-07T22:04:24Z",
+  "status": "failed",
+  "httpStatus": 400,
+  "responseFile": "Phi-4-reasoning__responses__direct-v1.response.json",
+  "notes": "Responses negative/compatibility probe."
+}

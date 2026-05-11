@@ -1,0 +1,20 @@
+{
+  "deployment": "gpt-4o-mini-tts",
+  "capability": "audio-speech",
+  "transport": "gateway-versioned",
+  "method": "POST",
+  "url": "https://ai-gateway-eastus2.azure-api.net/openai/deployments/gpt-4o-mini-tts/audio/speech?api-version=2025-04-01-preview",
+  "auth": "APIM subscription key in api-key header; value intentionally not saved",
+  "request": {
+    "model": "gpt-4o-mini-tts",
+    "input": "OK",
+    "voice": "alloy",
+    "response_format": "mp3"
+  },
+  "startedAt": "2026-05-07T22:04:06Z",
+  "endedAt": "2026-05-07T22:04:07Z",
+  "status": "passed",
+  "httpStatus": 200,
+  "responseFile": "gpt-4o-mini-tts__audio-speech__gateway-versioned.mp3",
+  "notes": "TTS probe; binary MP3 saved when successful."
+}

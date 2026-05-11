@@ -1,0 +1,37 @@
+{
+  "id": "34d247df-c55a-43b4-a450-df1ca7b05e51",
+  "model": "grok-4.20-beta-0309-reasoning",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "OK\n\n\nThe user's directive is unambiguous and requires no elaboration, deviation, or additional content. Following it exactly satisfies the request while adhering to all core policies (no prohibited topics are involved). Confidence is high because the instruction is literal and self-contained."
+      },
+      "finish_reason": "stop",
+      "content_filter_results": {}
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 5,
+    "completion_tokens": 49,
+    "total_tokens": 472,
+    "audio_prompt_tokens": 0,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0,
+      "text_tokens": 5,
+      "image_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 418,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "num_sources_used": 0
+  },
+  "created": 1778191135,
+  "object": "chat.completion",
+  "prompt_filter_results": null
+}

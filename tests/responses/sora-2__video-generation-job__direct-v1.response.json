@@ -1,0 +1,15 @@
+{
+  "id": "video_69fd0c5f14d8819085679673ec41d6eb",
+  "object": "video",
+  "created_at": 1778191455,
+  "status": "queued",
+  "completed_at": null,
+  "error": null,
+  "expires_at": null,
+  "model": "sora-2",
+  "progress": 0,
+  "prompt": "A simple blue circle moves slowly across a plain white background.",
+  "remixed_from_video_id": null,
+  "seconds": "4",
+  "size": "720x1280"
+}

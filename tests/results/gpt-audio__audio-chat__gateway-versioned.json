@@ -1,0 +1,32 @@
+{
+  "deployment": "gpt-audio",
+  "capability": "audio-chat",
+  "transport": "gateway-versioned",
+  "method": "POST",
+  "url": "https://ai-gateway-eastus2.azure-api.net/openai/deployments/gpt-audio/chat/completions?api-version=2025-04-01-preview",
+  "auth": "APIM subscription key in api-key header; value intentionally not saved",
+  "request": {
+    "model": "gpt-audio",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Say OK."
+      }
+    ],
+    "modalities": [
+      "text",
+      "audio"
+    ],
+    "audio": {
+      "voice": "alloy",
+      "format": "mp3"
+    },
+    "max_completion_tokens": 128
+  },
+  "startedAt": "2026-05-07T22:04:09Z",
+  "endedAt": "2026-05-07T22:04:10Z",
+  "status": "passed",
+  "httpStatus": 200,
+  "responseFile": "gpt-audio__audio-chat__gateway-versioned.response.json",
+  "notes": "Gateway audio model probe requesting text plus audio output."
+}

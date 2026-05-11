@@ -1,0 +1,20 @@
+{
+  "deployment": "sora-2",
+  "capability": "video-generation-job",
+  "transport": "direct-v1",
+  "method": "POST",
+  "url": "https://admin-m8fg494d-eastus2.openai.azure.com/openai/v1/videos",
+  "auth": "Microsoft Entra ID bearer token; value intentionally not saved",
+  "request": {
+    "model": "sora-2",
+    "prompt": "A simple blue circle moves slowly across a plain white background.",
+    "seconds": "4",
+    "size": "720x1280"
+  },
+  "startedAt": "2026-05-07T22:04:13Z",
+  "endedAt": "2026-05-07T22:04:16Z",
+  "status": "passed",
+  "httpStatus": 200,
+  "responseFile": "sora-2__video-generation-job__direct-v1.response.json",
+  "notes": "Sora 2 documented v1 video creation route; creates an async job only."
+}

@@ -1,0 +1,18 @@
+{
+  "deployment": "gpt-audio",
+  "category": "audio-speech",
+  "gateway": "https://ai-gateway-eastus2.azure-api.net",
+  "method": "POST",
+  "url": "https://ai-gateway-eastus2.azure-api.net/openai/deployments/gpt-audio/audio/speech?api-version=2024-10-21",
+  "apiVersion": "2024-10-21",
+  "auth": "APIM subscription key in api-key header; value intentionally not saved",
+  "requestBody": {
+    "input": "OK",
+    "voice": "alloy"
+  },
+  "startedAt": "2026-05-07T21:22:13Z",
+  "endedAt": "2026-05-07T21:22:14Z",
+  "status": "failed",
+  "httpStatus": 404,
+  "responseFile": "gpt-audio.response.json"
+}

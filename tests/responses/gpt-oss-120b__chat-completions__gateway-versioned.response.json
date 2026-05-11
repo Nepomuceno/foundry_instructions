@@ -1,0 +1,25 @@
+{
+  "id": "6778f86c280740d696762ad9be3bf005",
+  "model": "gpt-oss-120b",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "OK",
+        "reasoning_content": "User says \"Reply with OK only.\" So just respond \"OK\"."
+      },
+      "finish_reason": "stop",
+      "content_filter_results": {}
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 72,
+    "completion_tokens": 25,
+    "total_tokens": 97,
+    "audio_prompt_tokens": 0
+  },
+  "created": 1778191098,
+  "object": "chat.completion",
+  "prompt_filter_results": null
+}

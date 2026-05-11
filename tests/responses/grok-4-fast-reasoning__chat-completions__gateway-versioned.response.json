@@ -1,0 +1,7 @@
+{
+  "error": {
+    "code": "unknown_model",
+    "message": "Unknown model: grok-4-fast-reasoning",
+    "details": "Unknown model: grok-4-fast-reasoning"
+  }
+}
