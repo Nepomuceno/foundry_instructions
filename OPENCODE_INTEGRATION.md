@@ -154,10 +154,11 @@ Drop this in:
   "$schema": "https://opencode.ai/config.json",
   "provider": {
     "ai-gateway": {
-      "npm": "@ai-sdk/openai-compatible",
+      "npm": "@ai-sdk/openai",
       "name": "AI Gateway",
       "options": {
         "baseURL": "https://ai-gateway-eastus2.azure-api.net/openai/v1",
+        "apiKey": "{env:AI_GATEWAY_API_KEY}",
         "headers": {
           "api-key": "{env:AI_GATEWAY_API_KEY}"
         }
@@ -186,11 +187,25 @@ Drop this in:
 }
 ```
 
+> ⚠️ **Important — `npm` is `@ai-sdk/openai`, not `@ai-sdk/openai-compatible`.**
+>
+> The GPT-5 family (`gpt-5`, `gpt-5.x`, `gpt-5.4*`, etc.) **requires `max_completion_tokens` instead of `max_tokens`.** The plain `@ai-sdk/openai-compatible` package doesn't know this and sends `max_tokens`, which causes:
+>
+> ```
+> Unsupported parameter: 'max_tokens' is not supported with this model.
+> Use 'max_completion_tokens' instead.
+> ```
+>
+> The official `@ai-sdk/openai` package handles this translation automatically for all GPT-5-family models. Since the gateway is OpenAI-shaped, you can point `@ai-sdk/openai` at our `baseURL` and everything works. See: [Vercel AI SDK — OpenAI provider](https://ai-sdk.dev/providers/ai-sdk-providers/openai) and [Vercel AI SDK — Custom providers](https://ai-sdk.dev/providers/openai-compatible-providers/custom-providers).
+>
+> Why two auth fields (`apiKey` **and** `headers.api-key`)? The `@ai-sdk/openai` package sends `Authorization: Bearer <apiKey>` by default, but our gateway expects the key in the `api-key` header. Setting both means the request works regardless of which header the gateway inspects first, and the SDK doesn't complain about a missing `apiKey`.
+
 What this is doing:
 
-- **`npm: "@ai-sdk/openai-compatible"`** tells OpenCode "this is OpenAI-shaped, please don't be weird about it."
-- **`baseURL`** points at the gateway's v1 surface.
-- **`headers.api-key`** injects your key on every request. The `{env:...}` syntax pulls from your shell, so the key never lives in the file.
+- **`npm: "@ai-sdk/openai"`** uses Vercel's official OpenAI provider. It knows GPT-5-family models need `max_completion_tokens` and translates automatically. If you use `@ai-sdk/openai-compatible` instead, you'll get the `Unsupported parameter: 'max_tokens'` error.
+- **`baseURL`** points at the gateway's v1 surface. The OpenAI SDK is happy with any OpenAI-shaped endpoint.
+- **`apiKey`** is what `@ai-sdk/openai` uses internally — it ships the value as a Bearer token by default, which our gateway ignores.
+- **`headers.api-key`** is the header our gateway actually authenticates on. Both fields point at the same env var.
 - **`model`** is your default for chats.
 - **`small_model`** is what OpenCode uses for cheap stuff like generating session titles.
 
@@ -381,7 +396,7 @@ For full image/video/audio reference, see [`AI_GATEWAY_CONSUMER_GUIDE.md`](AI_GA
 | OpenCode shows zero models | Config file not loaded | Check the path; confirm valid JSON; check OpenCode logs |
 | `404` on a model name | Typo, wrong case, or it's not on the gateway | Use names from the table above; case-sensitive |
 | `429 RateLimitReached` | Per-model RPM exceeded | Wait a minute. Image/video are especially low. |
-| `Unsupported parameter: max_tokens` | GPT-5-family chat completions | OpenCode usually handles this for you; if you hit it from a custom command, switch to `max_completion_tokens` |
+| `Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.` | Your provider is `@ai-sdk/openai-compatible`, which sends `max_tokens`. GPT-5-family models reject it. | Change `npm` to `@ai-sdk/openai` in your `opencode.json` (see [Step 2](#step-2-add-the-provider)). The official OpenAI provider translates `max_tokens` → `max_completion_tokens` automatically. Then restart OpenCode. |
 | Streaming feels slow | First token latency on big reasoning models | Try a smaller variant: `gpt-5.4-mini` instead of `gpt-5.4-pro` |
 | FLUX models don't show up | They aren't on the OpenAI-shaped path | They live on `/admin-m8fg494d-eastus2/providers/blackforestlabs/...`; call them via curl, not via OpenCode's chat |
 | **Windows:** `opencode: command not found` | Installer ran but PATH not refreshed | Close and reopen the terminal. If still broken, add `%LOCALAPPDATA%\Programs\opencode` to user PATH |
@@ -423,5 +438,6 @@ For full image/video/audio reference, see [`AI_GATEWAY_CONSUMER_GUIDE.md`](AI_GA
 
 **Upstream SDK this guide relies on:**
 
-- `@ai-sdk/openai-compatible` — the Vercel AI SDK provider OpenCode uses to talk to OpenAI-shaped APIs: <https://ai-sdk.dev/providers/openai-compatible-providers>
+- `@ai-sdk/openai` — Vercel AI SDK's official OpenAI provider (handles `max_completion_tokens` for GPT-5 family automatically): <https://ai-sdk.dev/providers/ai-sdk-providers/openai>
+- `@ai-sdk/openai-compatible` — generic OpenAI-shaped provider, useful for non-OpenAI APIs but **does not** translate `max_tokens` for GPT-5: <https://ai-sdk.dev/providers/openai-compatible-providers>
 

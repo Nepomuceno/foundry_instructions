@@ -93,10 +93,11 @@ Drop this into `~/.config/opencode/opencode.json`:
   "$schema": "https://opencode.ai/config.json",
   "provider": {
     "ai-gateway": {
-      "npm": "@ai-sdk/openai-compatible",
+      "npm": "@ai-sdk/openai",
       "name": "AI Gateway",
       "options": {
         "baseURL": "https://ai-gateway-eastus2.azure-api.net/openai/v1",
+        "apiKey": "{env:AI_GATEWAY_API_KEY}",
         "headers": { "api-key": "{env:AI_GATEWAY_API_KEY}" }
       },
       "models": {
