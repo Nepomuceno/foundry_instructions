@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◐</text></svg>" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="{{ '/' | relative_url }}">
+        <span class="brand-mark">◐</span>
+        <span class="brand-text">AI Gateway</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="{{ '/consumer-guide/' | relative_url }}">Consumer Guide</a>
+        <a href="{{ '/opencode/' | relative_url }}">OpenCode</a>
+        <a href="{{ '/images/' | relative_url }}">Images</a>
+        <a href="{{ '/access/' | relative_url }}">Access</a>
+        <a class="ghost" href="https://github.com/Nepomuceno/foundry_instructions" target="_blank" rel="noopener">GitHub →</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap foot">
+      <span>© {{ 'now' | date: '%Y' }} Gabriel Nepomuceno · MIT License</span>
+      <span><a href="https://github.com/Nepomuceno/foundry_instructions">Source on GitHub</a></span>
+    </div>
+  </footer>
+</body>
+</html>

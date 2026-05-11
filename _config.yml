@@ -1,0 +1,27 @@
+title: AI Gateway Starter Kit
+description: Azure AI Foundry instructions, guides, and integration docs. One key, many models, zero portal tours.
+
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+  input: GFM
+  hard_wrap: false
+
+highlighter: rouge
+
+exclude:
+  - tests
+  - output
+  - README.md
+  - AI_GATEWAY_CONSUMER_GUIDE.md
+  - AZURE_AI_FOUNDRY_ACCESS.md
+  - IMAGE_MODEL_USAGE.md
+  - OPENCODE_INTEGRATION.md
+  - LICENSE
+  - hero.png
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .github
+  - .gitignore
+  - node_modules

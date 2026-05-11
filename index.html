@@ -1,0 +1,95 @@
+---
+layout: default
+title: AI Gateway Starter Kit
+description: One key. Many models. Zero portal tours. Azure AI Foundry made boring (in a good way).
+---
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-inner">
+      <p class="eyebrow">Hackathon edition</p>
+      <h1>One key. <em>Many models.</em><br>Zero portal tours.</h1>
+      <p class="lede">
+        An Azure API Management gateway in front of Azure AI Foundry. Send one
+        <code>api-key</code> header — get GPT-5.4, Sora, FLUX, Mistral, Grok,
+        and a pile of audio models. OpenAI-compatible. No OAuth at 2am.
+      </p>
+      <div class="cta-row">
+        <a class="cta" href="{{ '/consumer-guide/' | relative_url }}">Get started <span aria-hidden="true">→</span></a>
+        <a class="cta secondary" href="https://github.com/Nepomuceno/foundry_instructions" target="_blank" rel="noopener">View on GitHub</a>
+      </div>
+      <div class="pills" aria-label="Available models">
+        <span class="pill accent">gpt-5.4</span>
+        <span class="pill">gpt-5.4-mini</span>
+        <span class="pill">gpt-5</span>
+        <span class="pill">Mistral-Large-3</span>
+        <span class="pill">grok-4-20-reasoning</span>
+        <span class="pill">FLUX.2-pro</span>
+        <span class="pill">sora-2</span>
+        <span class="pill">gpt-audio</span>
+        <span class="pill">+ more</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <h2 class="section-title">The Docs</h2>
+    <div class="grid">
+      <a class="card" href="{{ '/consumer-guide/' | relative_url }}">
+        <span class="card-num">01 / Consumer Guide</span>
+        <h3 class="card-title">Just call stuff</h3>
+        <p class="card-desc">Copy-paste curl for every model class. Chat, responses, image, video, audio.</p>
+        <span class="card-arrow">read →</span>
+      </a>
+      <a class="card" href="{{ '/opencode/' | relative_url }}">
+        <span class="card-num">02 / OpenCode</span>
+        <h3 class="card-title">Wire it into your TUI</h3>
+        <p class="card-desc">Drop the gateway into OpenCode. Variants, agents, project configs, common errors.</p>
+        <span class="card-arrow">read →</span>
+      </a>
+      <a class="card" href="{{ '/images/' | relative_url }}">
+        <span class="card-num">03 / Image Models</span>
+        <h3 class="card-title">Pixel-pushing reference</h3>
+        <p class="card-desc">Sizes, formats, the difference between <code>size</code> and <code>width</code>/<code>height</code>.</p>
+        <span class="card-arrow">read →</span>
+      </a>
+      <a class="card" href="{{ '/access/' | relative_url }}">
+        <span class="card-num">04 / Foundry Access</span>
+        <h3 class="card-title">Owner-side overview</h3>
+        <p class="card-desc">How the Foundry account, APIM gateway, and routing fit together. RBAC. Quotas.</p>
+        <span class="card-arrow">read →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap narrow">
+    <h2 class="section-title">60-second quickstart</h2>
+    <p>Save the key, then say hi to a model:</p>
+    <pre class="snippet"><span class="c"># 1. Save the key (don&apos;t commit it, don&apos;t paste it in chat)</span>
+<span class="k">export</span> AI_GATEWAY_API_KEY=<span class="c">&quot;&lt;the-key-you-were-given&gt;&quot;</span>
+
+<span class="c"># 2. Say hi</span>
+curl -X POST <span class="c">&quot;https://ai-gateway-eastus2.azure-api.net/openai/v1/responses&quot;</span> \
+  -H <span class="c">&quot;api-key: $AI_GATEWAY_API_KEY&quot;</span> \
+  -H <span class="c">&quot;Content-Type: application/json&quot;</span> \
+  -d <span class="c">&apos;{&quot;model&quot;:&quot;gpt-5.4-nano&quot;,&quot;input&quot;:&quot;Say hi to the hackathon.&quot;}&apos;</span></pre>
+    <p style="margin-top:1rem">
+      JSON back = you&rsquo;re in. <code>401</code> = wrong key. <code>429</code> = slow down, speedy.
+    </p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap narrow">
+    <h2 class="section-title">House rules</h2>
+    <ol>
+      <li><strong>One key, one human.</strong> Don&rsquo;t share keys with your team — ask for more, they&rsquo;re free.</li>
+      <li><strong>Fail loudly.</strong> Screenshot weird errors and post in the hack channel.</li>
+      <li><strong>Have fun.</strong> This is a hack. Build the weird thing.</li>
+    </ol>
+  </div>
+</section>
