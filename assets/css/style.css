@@ -381,3 +381,149 @@ section.block:last-of-type { border-bottom: none; }
 
 /* ---------- selection ---------- */
 ::selection { background: var(--accent); color: #fff; }
+
+/* ---------- models page ---------- */
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  padding: 1.2rem 1.4rem;
+  margin: 0 0 3rem;
+  background: var(--bg-soft);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+  font-family: var(--mono);
+}
+
+.models-section { margin: 4rem 0; }
+.models-section:first-of-type { margin-top: 0; }
+.section-lede {
+  color: var(--ink-soft);
+  margin: -1rem 0 2rem;
+  max-width: 70ch;
+}
+
+.model-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1rem;
+}
+
+.model {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.4rem 1.5rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: .65rem;
+  transition: border-color .15s ease, transform .2s ease;
+  position: relative;
+}
+.model:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+.model.recommended {
+  border-color: var(--accent);
+  background: linear-gradient(180deg, var(--accent-soft) 0%, var(--surface) 60%);
+}
+.model.disabled { opacity: .65; }
+.model.disabled:hover { transform: none; border-color: var(--line); }
+
+.model > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  margin: 0;
+}
+.model h3 {
+  font-family: var(--mono);
+  font-size: 1rem;
+  margin: 0;
+  color: var(--ink);
+  letter-spacing: -.01em;
+  word-break: break-word;
+}
+.model p {
+  margin: 0;
+  font-size: .92rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+.model .note {
+  font-family: var(--mono);
+  font-size: .78rem;
+  color: var(--ink-mute);
+  margin-top: auto;
+  padding-top: .5rem;
+  border-top: 1px dashed var(--line-soft);
+  line-height: 1.5;
+}
+
+.model-tag {
+  font-family: var(--mono);
+  font-size: .68rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: .2rem .5rem;
+  border-radius: 3px;
+  background: var(--bg-soft);
+  color: var(--ink-mute);
+  border: 1px solid var(--line);
+  white-space: nowrap;
+}
+.model-tag.accent {
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-color: var(--accent);
+}
+.model-tag.warn {
+  color: #b45309;
+  background: #fef3c7;
+  border-color: #fde68a;
+}
+@media (prefers-color-scheme: dark) {
+  .model-tag.warn {
+    color: #fbbf24;
+    background: #2a1f0a;
+    border-color: #5c4416;
+  }
+}
+
+.caps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem;
+  margin: .25rem 0 0;
+}
+.cap {
+  font-family: var(--mono);
+  font-size: .7rem;
+  letter-spacing: .04em;
+  padding: .18rem .5rem;
+  border-radius: 3px;
+  background: var(--bg-soft);
+  border: 1px solid var(--line-soft);
+  color: var(--ink-soft);
+}
+.cap-chat   { color: #1d4ed8; background: #dbeafe; border-color: #bfdbfe; }
+.cap-resp   { color: #15803d; background: #dcfce7; border-color: #bbf7d0; }
+.cap-tool   { color: #7c3aed; background: #ede9fe; border-color: #ddd6fe; }
+.cap-vision { color: #be185d; background: #fce7f3; border-color: #fbcfe8; }
+.cap-image  { color: #c2410c; background: #ffedd5; border-color: #fed7aa; }
+.cap-audio  { color: #0e7490; background: #cffafe; border-color: #a5f3fc; }
+.cap-video  { color: #b91c1c; background: #fee2e2; border-color: #fecaca; }
+.cap-dep    { color: #6b7280; background: #f3f4f6; border-color: #e5e7eb; text-decoration: line-through; }
+
+@media (prefers-color-scheme: dark) {
+  .cap-chat   { color: #93c5fd; background: #172554; border-color: #1e3a8a; }
+  .cap-resp   { color: #86efac; background: #052e16; border-color: #14532d; }
+  .cap-tool   { color: #c4b5fd; background: #2e1065; border-color: #4c1d95; }
+  .cap-vision { color: #f9a8d4; background: #500724; border-color: #831843; }
+  .cap-image  { color: #fdba74; background: #431407; border-color: #7c2d12; }
+  .cap-audio  { color: #67e8f9; background: #083344; border-color: #155e75; }
+  .cap-video  { color: #fca5a5; background: #450a0a; border-color: #7f1d1d; }
+  .cap-dep    { color: #9ca3af; background: #1f2937; border-color: #374151; }
+}
